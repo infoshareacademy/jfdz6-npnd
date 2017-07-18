@@ -1,2 +1,2 @@
 # jfdz6-npnd
-gfgdf
+Plik Readme :) opisujący projekt
