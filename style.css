@@ -17,3 +17,8 @@
     float: left;
     border: 1px solid rgb(175, 0 ,10);
 }
+#social_media {
+    width: 100px;
+    height: 100px;
+    background: rgb(240, 240, 240);
+}
