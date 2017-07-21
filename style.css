@@ -22,3 +22,19 @@
     height: 100px;
     background: rgb(240, 240, 240);
 }
+#tekst {
+    width: 500px;
+    height: 300px;
+    border: 1px solid red;
+}
+.contact_form {
+    width:500px;
+}
+#contact_form {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.contact_form_list {
+    padding: 8px 0 8px 25px;
+}

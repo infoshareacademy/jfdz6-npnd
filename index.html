@@ -62,5 +62,18 @@
         <i class="fa fa-twitter-square" aria-hidden="true"></i>
     </a>
 </div>
+<div class="contact_form">
+    <h1>Formularz kontaktowy</h1>
+    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Thank youfor your feedback.')">
+        <ul id="contact_form">
+            <li class="contact_form_list"><input type="text" name="imie" placeholder="Imię (wymagane)" required></li>
+            <li class="contact_form_list"><input type="text" name="nazwisko" placeholder="Nazwisko (wymagane)" required></li>
+            <li class="contact_form_list"><input type="email" name="email" placeholder="adres e-mail (wymagane)" required></li>
+            <li class="contact_form_list"><input type="text" name="telefon" placeholder="Nr tel (opcjonalnie)"></li>
+            <li class="contact_form_list"><textarea name="tekst" id="tekst" cols="1" rows="1" placeholder="Wpisz tutaj treść (wymagane)" required></textarea></li>
+            <li class="contact_form_list"><button type="submit"> Wyślij </button></li>
+        </ul>
+    </form>
+</div>
 </body>
 </html>
