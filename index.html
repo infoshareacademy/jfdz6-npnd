@@ -20,9 +20,9 @@
     <title>Analizator finansowy</title>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+<header id="top">
+    <nav class="navbar navbar-default navbar-fixed-top" >
+        <div class="container" >
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Przełącz nawigację</span>
@@ -30,12 +30,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!--<a class="navbar-brand" href="#"></a>-->
-                <img src="img/logo_400x100_nobg.png" class="img-responsive img-logo" >
+                <a href="#top"><img src="img/logo_400x100_nobg.png" class="img-responsive img-logo" ></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right"> <!-- TODO linki parkuja sekcje niedokładnie  -->
                     <li><a href="#top">Home</a></li>
                     <li><a href="#funkcje">Funkcje</a></li>
                     <li><a href="#about">O nas</a></li>
@@ -102,7 +101,7 @@
         <i class="fa fa-twitter-square" aria-hidden="true"></i>
     </a>
 </div>
-<div class="contact_form">
+<div class="contact_form" id="contact">
     <h1>Formularz kontaktowy</h1>
     <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Thank youfor your feedback.')">
         <ul id="contact_form">

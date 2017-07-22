@@ -60,6 +60,12 @@
 }
 .navbar-default .navbar-nav>li>a:hover
 {
+    color: #000a91;
+    background-color: #fff;
+
+}
+.navbar-default .navbar-nav>li>a:active /* TODO nie działa   */
+{
     color: #af000a;
     background-color: #fff;
 
