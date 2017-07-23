@@ -70,3 +70,11 @@
     background-color: #fff;
 
 }
+#funkcje .poziomy > .col-6 {
+    position: relative;
+}
+#funkcje .poziomy i.fa {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
