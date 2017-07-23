@@ -85,33 +85,3 @@
         font-size: 14px;
     }
 }
-.confirmation {
-    width: 1000px;
-    height: 500px;
-    background-image: url('http://images.huffingtonpost.com/2014-06-19-bigstockTheLoveOfMoney302143011.jpg');
-    background-size: cover;
-    text-align: center;
-    line-height: 500px;
-}
-.contact_confirmation {
-    line-height:500px;
-}
-#cookieInfo{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: #519fff;
-    color: #fff;
-    z-index: 1000;
-    opacity: 0.6;
-}
-#cookieInfo span{
-    position: relative;
-    left: 95%;
-    top: 10px;
-    font-size: 30px;
-    color: red;
-    cursor: pointer;
-}
