@@ -5,9 +5,10 @@
     height: 100px;
 }
 #social_media {
-    width: 100px;
-    height: 100px;
+    width: 40px;
     background: rgb(240, 240, 240);
+    position: fixed;
+    top: 200px;
 }
 #tekst {
     width: 500px;
@@ -55,10 +56,10 @@
     background-color: #fff;
 
 }
-#funkcje .poziomy > .col-6 {
+#features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
 }
-#funkcje .poziomy i.fa {
+#features i.fa {
     position: absolute;
     top: 15px;
     right: 15px;
