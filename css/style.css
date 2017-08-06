@@ -1,6 +1,13 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+   position: relative;
+    font-family: sans-serif;
+}
+
+
 .top1 {
     height: 100px;
 }
@@ -55,7 +62,44 @@
     color: #af000a;
     background-color: #fff;
 
+
+#hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
+
+#hero > .col-lg-2 .top2 > .col-lg-2 .col-md-2 .col-sm-2 .col-xs-12 {
+    position: relative;
+}
+#features i.fa {
+    position: absolute;
+
+.hero-content {
+
+    width: 1000px;
+    height: 500px;
+    background-image: url("../img/biznesmen.jpg");
+    background-size: cover;
+    text-align: center;
+    line-height: 500px;
+    position: absolute;
+    color: red;
+
+.hero-text {
+    color: white;
+}
+
+.canvas-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#myCanvas {
+    border: 1px solid black;
+}
+
+
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
 }
@@ -68,7 +112,14 @@
     .navbar-default
     {
         background: #f0f0f0;
-        font-size: 14px;
+        font-size: 14px;}
+    .hero {
+        background: url("../images/background-mobile.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
     }
 }
 .confirmation {
@@ -79,6 +130,8 @@
     text-align: center;
     line-height: 500px;
 }
+
+
 .contact_confirmation {
     line-height:500px;
 }
