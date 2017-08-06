@@ -111,23 +111,32 @@
         <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
     </a>
 </div>
-<div class="contact_form" id="contact">
-    <h1>Formularz kontaktowy</h1>
+<div class="container" id="contact">
     <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
-        <ul id="contact_form">
+    <h1>Formularz kontaktowy</h1>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <ul class="contact_form">
             <li class="contact_form_list"><input type="text" name="imie" placeholder="Imię (wymagane)" required></li>
             <li class="contact_form_list"><input type="text" name="nazwisko" placeholder="Nazwisko (wymagane)" required>
             </li>
             <li class="contact_form_list"><input type="email" name="email" placeholder="adres e-mail (wymagane)"
                                                  required></li>
             <li class="contact_form_list"><input type="text" name="telefon" placeholder="Nr tel (opcjonalnie)"></li>
-            <li class="contact_form_list"><textarea name="tekst" id="tekst" cols="1" rows="1"
+        </ul>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <ul class="contact_form">
+            <li class="contact_form_list"><textarea name="tekst" id="tekst" rows="5"
                                                     placeholder="Wpisz tutaj treść (wymagane)" required></textarea></li>
             <li class="contact_form_list">
                 <button type="submit"> Wyślij</button>
             </li>
         </ul>
+    </div>
     </form>
+    <!--TODO MAPKA-->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> MAPKA
+    </div>
 </div>
 <!-- o Nas! !-->
 <div class="container section" id="authors">
