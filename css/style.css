@@ -17,14 +17,11 @@ body {
     top: 200px;
 }
 #tekst {
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     border: 1px solid red;
 }
 .contact_form {
-    width:500px;
-}
-#contact_form {
     list-style-type: none;
     margin: 0;
     padding: 0;
