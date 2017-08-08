@@ -46,6 +46,14 @@
         </div>
     </nav>
 </header>
+<--! zajawka !-->
+<div id="hero" class="img-responsive">
+    <div class="hero-content">
+        <h1 class="hero-text">Z nami zarobisz!</h1>
+        <a href="#contact" class="btn btn-primary btn-lg">Skontaktuj się z nami!</a>
+    </div>
+</div>
+
 <div id="features">
     <div class="container">
         <div class="col-lg-12 top1"></div>
@@ -128,24 +136,95 @@
         <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
     </a>
 </div>
-<div class="contact_form" id="contact">
-    <h1>Formularz kontaktowy</h1>
+<div class="container" id="contact">
     <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
-        <ul id="contact_form">
-            <li class="contact_form_list"><input type="text" name="imie" placeholder="Imię (wymagane)" required></li>
-            <li class="contact_form_list"><input type="text" name="nazwisko" placeholder="Nazwisko (wymagane)" required>
-            </li>
-            <li class="contact_form_list"><input type="email" name="email" placeholder="adres e-mail (wymagane)"
-                                                 required></li>
-            <li class="contact_form_list"><input type="text" name="telefon" placeholder="Nr tel (opcjonalnie)"></li>
-            <li class="contact_form_list"><textarea name="tekst" id="tekst" cols="1" rows="1"
-                                                    placeholder="Wpisz tutaj treść (wymagane)" required></textarea></li>
-            <li class="contact_form_list">
-                <button type="submit"> Wyślij</button>
-            </li>
-        </ul>
+        <h1>Formularz kontaktowy</h1>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <ul class="contact_form">
+                <li class="contact_form_list"><input type="text" name="imie" placeholder="Imię (wymagane)" required>
+                </li>
+                <li class="contact_form_list"><input type="text" name="nazwisko" placeholder="Nazwisko (wymagane)"
+                                                     required>
+                </li>
+                <li class="contact_form_list"><input type="email" name="email" placeholder="adres e-mail (wymagane)"
+                                                     required></li>
+                <li class="contact_form_list"><input type="text" name="telefon" placeholder="Nr tel (opcjonalnie)"></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <ul class="contact_form">
+                <li class="contact_form_list"><textarea name="tekst" id="tekst" rows="5"
+                                                        placeholder="Wpisz tutaj treść (wymagane)" required></textarea>
+                </li>
+                <li class="contact_form_list">
+                    <button type="submit"> Wyślij</button>
+                </li>
+            </ul>
+        </div>
     </form>
+    <!--TODO MAPKA-->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> MAPKA
+    </div>
 </div>
+<!-- o Nas! !-->
+<div class="container section" id="authors">
+    <h2 class="section-header">Poznaj nasz zespół...</h2>
+    <div class="row text-center">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="img/przyład.jpg" alt="team mate image">
+                <h4 class="section-inner-header">Sknerus McKwacz</h4>
+                <p class="text-muted">Front-end junior developer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto cum deserunt facere
+                    fuga maiores saepe sapiente similique totam voluptatibus. Aut cum ex nisi perspiciatis sequi,
+                    tenetur ut. Natus, nemo.</p>
+                <p>
+                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="img/przyład.jpg" alt="team mate image">
+                <h4 class="section-inner-header">Sknerus McKwacz</h4>
+                <p class="text-muted">Front-end junior developer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto cum deserunt facere
+                    fuga maiores saepe sapiente similique totam voluptatibus. Aut cum ex nisi perspiciatis sequi,
+                    tenetur ut. Natus, nemo.</p>
+                <p>
+                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="img/przyład.jpg" alt="team mate image">
+                <h4 class="section-inner-header">Carter Pewterschmidt</h4>
+                <p class="text-muted">Front-end junior developer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto cum deserunt facere
+                    fuga maiores saepe sapiente similique totam voluptatibus. Aut cum ex nisi perspiciatis sequi,
+                    tenetur ut. Natus, nemo.</p>
+                <p>
+                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+                <img src="img/przyład.jpg" alt="team mate image">
+                <h4 class="section-inner-header">Sknerus McKwacz</h4>
+                <p class="text-muted">Front-end junior developer</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto cum deserunt facere
+                    fuga maiores saepe sapiente similique totam voluptatibus. Aut cum ex nisi perspiciatis sequi,
+                    tenetur ut. Natus, nemo.</p>
+                <p>
+                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     (function () {
         showCookieInfo();

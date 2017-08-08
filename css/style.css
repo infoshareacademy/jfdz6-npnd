@@ -1,6 +1,12 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+   position: relative;
+    font-family: sans-serif;
+}
+
 .top1 {
     height: 100px;
 }
@@ -54,8 +60,31 @@
 {
     color: #af000a;
     background-color: #fff;
+}
+#hero {
+    position: relative;
+    overflow: hidden;
+    background-image: url("https://descubriendotalento.files.wordpress.com/2017/06/2797.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 657px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
+.hero-content {
+    height:  100%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.hero-text, .hero-content > a {
+    transform: translate(0px,60vh)
+}
+#features i.fa {
+    position: absolute;
+}
+
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
 }
@@ -64,13 +93,12 @@
     top: 15px;
     right: 15px;
 }
-@media(max-width:768px){
-    .navbar-default
-    {
+@media(max-width:768px) {
+    .navbar-default {
         background: #f0f0f0;
-        font-size: 14px;
-    }
+        font-size: 14px;}
 }
+
 .confirmation {
     width: 1000px;
     height: 500px;
@@ -79,6 +107,7 @@
     text-align: center;
     line-height: 500px;
 }
+
 .contact_confirmation {
     line-height:500px;
 }
