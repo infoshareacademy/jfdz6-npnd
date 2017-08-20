@@ -37,10 +37,23 @@
             <div id="navbar" class="navbar-collapse collapse">
 
                 <ul class="nav navbar-nav navbar-right"> <!-- TODO linki parkuja sekcje niedokładnie  -->
-                    <li><a href="#top">Home</a></li>
-                    <li><a href="#features">Funkcje</a></li>
-                    <li><a href="#authors">O nas</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li>
+                        <a href="#top" class="hidden-xs">Home</a>
+                        <a href="#top" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
+                    </li>
+                    <li>
+                        <a href="#features" class="hidden-xs">Funkcje</a>
+                        <a href="#features" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Funkcje</a>
+                    </li>
+
+                    <li>
+                        <a href="#authors" class="hidden-xs">O nas</a>
+                        <a href="#authors" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">O nas</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="hidden-xs">O nas</a>
+                        <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Kontakt</a>
+                    </li>
                 </ul>
             </div>
         </div>
