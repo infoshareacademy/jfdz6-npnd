@@ -45,9 +45,10 @@ h1 > small{
 
 .navbar-default
 {
-    background: #f0f0f0;
+    background-color: transparent;
     font-size: 20px;
 }
+
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 0 0;
