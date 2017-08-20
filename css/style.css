@@ -10,6 +10,12 @@ body {
 .top1 {
     height: 100px;
 }
+h1{
+    margin-top: 62px;
+}
+h1 > small{
+    display: block;
+}
 #social_media {
     width: 40px;
     background: transparent;
@@ -119,10 +125,13 @@ body {
     z-index: 1000;
     opacity: 0.9;
 }
+#cookieInfo p{
+    padding: 10px 30px;
+}
 #cookieInfo span{
-    position: relative;
+    position: absolute;
     left: 98%;
-    top: -45px;
+    top: 10px;
     font-size: 30px;
     color: black;
     cursor: pointer;
