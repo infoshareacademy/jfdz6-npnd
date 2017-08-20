@@ -10,6 +10,12 @@ body {
 .top1 {
     height: 100px;
 }
+h1{
+    margin-top: 62px;
+}
+h1 > small{
+    display: block;
+}
 #social_media {
     width: 40px;
     background: transparent;
@@ -76,7 +82,7 @@ body {
     color: white;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,60vh)
+    transform: translate(0px,50vh)
 }
 #features i.fa {
     position: absolute;
@@ -119,10 +125,13 @@ body {
     z-index: 1000;
     opacity: 0.9;
 }
+#cookieInfo p{
+    padding: 10px 30px;
+}
 #cookieInfo span{
-    position: relative;
-    left: 98%;
-    top: -45px;
+    position: absolute;
+    left: 96%;
+    top: 10px;
     font-size: 30px;
     color: black;
     cursor: pointer;
