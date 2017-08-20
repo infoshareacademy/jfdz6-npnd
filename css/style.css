@@ -3,76 +3,69 @@
 }
 
 body {
-    position: relative;
+   position: relative;
     font-family: sans-serif;
 }
 
 .top1 {
     height: 100px;
 }
-
-h1 {
+h1{
     margin-top: 62px;
 }
-
-h1 > small {
+h1 > small{
     display: block;
 }
-
 #social_media {
     width: 40px;
     background: transparent;
     position: fixed;
     top: 200px;
 }
-
 #tekst {
     width: 100%;
     height: 100%;
-    border: 1px solid red;
 }
-
 .contact_form {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
-.contact_form_list {
-    padding: 8px 0 8px 25px;
+.contact_form_list:first-child {
+    padding-right: 8px;
 }
-
+.contact_form_list {
+    padding: 8px 0px 8px 0px;
+}
 .img-logo { /* TODO czy używać klasy tylko do jednego logo? */
     width: 200px;
     height: 50px;
 }
 
-.navbar-default {
+.navbar-default
+{
     background: #f0f0f0;
     font-size: 20px;
 }
-
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 0 0;
 }
-
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav>li>a
+{
     color: #000a91;
 }
-
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav>li>a:hover
+{
     color: #000a91;
     background-color: #fff;
 
 }
-
-.navbar-default .navbar-nav > li > a:active /* TODO nie działa   */
+.navbar-default .navbar-nav>li>a:active /* TODO nie działa   */
 {
     color: #af000a;
     background-color: #fff;
 }
-
 #hero {
     position: relative;
     overflow: hidden;
@@ -84,18 +77,15 @@ h1 > small {
     background-attachment: fixed;
 
 }
-
 .hero-content {
-    height: 100%;
+    height:  100%;
     position: relative;
     text-align: center;
     color: white;
 }
-
 .hero-text, .hero-content > a {
-    transform: translate(0px, 45vh)
+    transform: translate(0px,45vh)
 }
-
 #features i.fa {
     position: absolute;
 }
@@ -103,14 +93,12 @@ h1 > small {
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
 }
-
 #features i.fa {
     position: absolute;
     top: 15px;
     right: 15px;
 }
-
-@media (max-width: 768px) {
+@media(max-width:768px) {
     .navbar-default {
         background: #f0f0f0;
         font-size: 14px;
@@ -120,21 +108,7 @@ h1 > small {
         text-align: center;
     }
 }
-
-.confirmation {
-    width: 1000px;
-    height: 500px;
-    background-image: url('http://images.huffingtonpost.com/2014-06-19-bigstockTheLoveOfMoney302143011.jpg');
-    background-size: cover;
-    text-align: center;
-    line-height: 500px;
-}
-
-.contact_confirmation {
-    line-height: 500px;
-}
-
-#cookieInfo {
+#cookieInfo{
     position: fixed;
     bottom: 0;
     left: 0;
@@ -145,12 +119,10 @@ h1 > small {
     z-index: 1000;
     opacity: 0.9;
 }
-
-#cookieInfo p {
+#cookieInfo p{
     padding: 10px 30px;
 }
-
-#cookieInfo span {
+#cookieInfo span{
     position: absolute;
     left: 96%;
     top: 10px;
@@ -158,15 +130,17 @@ h1 > small {
     color: black;
     cursor: pointer;
 }
-
 .map {
     max-width: 100%;
     max-height: 300px;
 }
-
 .thumbnail img {
     width: 252.500px;
     height: 167.688px;
+}
+#contact .btn {
+padding: 8px 30px;
+margin: 5px;
 }
 
 footer {
@@ -176,7 +150,7 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
+
     .hero-text, .hero-content > a {
         transform: translate(0px, 40vh)
-    }
-}
+    }}
