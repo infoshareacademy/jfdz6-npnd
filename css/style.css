@@ -70,7 +70,7 @@ h1 > small{
     background-image: url("https://descubriendotalento.files.wordpress.com/2017/06/2797.jpg");
     background-size: cover;
     background-position: center;
-    height: 657px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -82,7 +82,7 @@ h1 > small{
     color: white;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,50vh)
+    transform: translate(0px,45vh)
 }
 #features i.fa {
     position: absolute;
@@ -144,3 +144,9 @@ h1 > small{
     width: 252.500px;
     height: 167.688px;
 }
+
+@media only screen and (max-width: 1024px) {
+
+    .hero-text, .hero-content > a {
+        transform: translate(0px, 40vh)
+    }}
