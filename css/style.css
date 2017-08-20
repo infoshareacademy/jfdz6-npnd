@@ -76,7 +76,7 @@ body {
     color: white;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,60vh)
+    transform: translate(0px,50vh)
 }
 #features i.fa {
     position: absolute;
