@@ -47,12 +47,12 @@
                     </li>
 
                     <li>
-                        <a href="#authors" class="hidden-xs">O nas</a>
-                        <a href="#authors" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">O nas</a>
+                        <a href="#contact" class="hidden-xs">Kontakt</a>
+                        <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Kontakt</a>
                     </li>
                     <li>
-                        <a href="#contact" class="hidden-xs">O nas</a>
-                        <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Kontakt</a>
+                        <a href="#authors" class="hidden-xs">O nas</a>
+                        <a href="#authors" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">O nas</a>
                     </li>
                 </ul>
             </div>
@@ -155,6 +155,32 @@
     </a>
 </div>
 
+<div class="container" id="contact">
+    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
+        <h1>Formularz kontaktowy</h1>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="contact_form_list form-group col-md-6">
+                    <input class="form-control" type="text" name="imie" placeholder="Imię (wymagane)" required>
+                </div>
+                <div class="contact_form_list form-group col-md-6">
+                    <input class="form-control" type="email" name="email" placeholder="adres e-mail (wymagane)"
+                           required>
+                </div>
+            </div>
+            <div class="row text-center">
+                <textarea class="form-control" name="tekst" id="tekst" rows="5"></textarea>
+                <button type="submit" class="btn btn-primary form-submit-button"> Wyślij</button>
+            </div>
+        </div>
+    </form>
+    <!--TODO MAPKA-->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=aleja+Grunwaldzka+472B,+80-309+Gda%C5%84sk&zoom=12&scale=1&size=450x220&maptype=roadmap&format=png&visual_refresh=true"
+             class="map">
+    </div>
+</div>
+
 <!-- o Nas! !-->
 <div class="container section" id="authors">
     <h1 class="section-header">
@@ -220,32 +246,6 @@
     </div>
 </div>
 
-
-<div class="container" id="contact">
-    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
-        <h1>Formularz kontaktowy</h1>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="row">
-                <div class="contact_form_list form-group col-md-6">
-                    <input class="form-control" type="text" name="imie" placeholder="Imię (wymagane)" required>
-                </div>
-                <div class="contact_form_list form-group col-md-6">
-                    <input class="form-control" type="email" name="email" placeholder="adres e-mail (wymagane)"
-                                                     required>
-                </div>
-            </div>
-            <div class="row text-center">
-                <textarea class="form-control" name="tekst" id="tekst" rows="5"></textarea>
-                <button type="submit" class="btn btn-primary form-submit-button"> Wyślij</button>
-            </div>
-        </div>
-    </form>
-    <!--TODO MAPKA-->
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=aleja+Grunwaldzka+472B,+80-309+Gda%C5%84sk&zoom=12&scale=1&size=450x220&maptype=roadmap&format=png&visual_refresh=true"
-             class="map">
-    </div>
-</div>
 <footer>
     <div class="container">
         <div class="col-sm-4 col-xs-12">
