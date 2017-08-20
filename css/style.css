@@ -72,7 +72,7 @@ h1 > small{
     background-image: url("https://descubriendotalento.files.wordpress.com/2017/06/2797.jpg");
     background-size: cover;
     background-position: center;
-    height: 657px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -84,7 +84,7 @@ h1 > small{
     color: white;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,50vh)
+    transform: translate(0px,45vh)
 }
 #features i.fa {
     position: absolute;
@@ -102,19 +102,6 @@ h1 > small{
     .navbar-default {
         background: #f0f0f0;
         font-size: 14px;}
-}
-
-.confirmation {
-    width: 1000px;
-    height: 500px;
-    background-image: url('http://images.huffingtonpost.com/2014-06-19-bigstockTheLoveOfMoney302143011.jpg');
-    background-size: cover;
-    text-align: center;
-    line-height: 500px;
-}
-
-.contact_confirmation {
-    line-height:500px;
 }
 #cookieInfo{
     position: fixed;
@@ -146,7 +133,11 @@ h1 > small{
     width: 252.500px;
     height: 167.688px;
 }
-.form-submit-button{
-    padding: 8px 30px;
-    margin: 5px;
+padding: 8px 30px;
+margin: 5px;
 }
+@media only screen and (max-width: 1024px) {
+
+    .hero-text, .hero-content > a {
+        transform: translate(0px, 40vh)
+    }}
