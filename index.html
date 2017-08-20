@@ -46,8 +46,9 @@
         </div>
     </nav>
 </header>
-<--! zajawka !-->
+
 <div id="hero" class="img-responsive" alt="zamyślony mężczyzna z banknotem 100 dolarówym na czole">
+
     <div class="hero-content">
         <h1 class="hero-text">Z nami zarobisz!</h1>
         <a href="#contact" class="btn btn-primary btn-lg">Skontaktuj się z nami!</a>
@@ -140,37 +141,7 @@
         <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
     </a>
 </div>
-<div class="container" id="contact">
-    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
-        <h1>Formularz kontaktowy</h1>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <ul class="contact_form">
-                <li class="contact_form_list"><input type="text" name="imie" placeholder="Imię (wymagane)" required>
-                </li>
-                <li class="contact_form_list"><input type="text" name="nazwisko" placeholder="Nazwisko (wymagane)"
-                                                     required>
-                </li>
-                <li class="contact_form_list"><input type="email" name="email" placeholder="adres e-mail (wymagane)"
-                                                     required></li>
-                <li class="contact_form_list"><input type="text" name="telefon" placeholder="Nr tel (opcjonalnie)"></li>
-            </ul>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <ul class="contact_form">
-                <li class="contact_form_list"><textarea name="tekst" id="tekst" rows="5"
-                                                        placeholder="Wpisz tutaj treść (wymagane)" required></textarea>
-                </li>
-                <li class="contact_form_list">
-                    <button type="submit"> Wyślij</button>
-                </li>
-            </ul>
-        </div>
-    </form>
-    <!--TODO MAPKA-->
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=aleja+Grunwaldzka+472B,+80-309+Gda%C5%84sk&zoom=12&scale=1&size=350x197&maptype=roadmap&format=png&visual_refresh=true" class="map">
-    </div>
-</div>
+
 <!-- o Nas! !-->
 <div class="container section" id="authors">
     <h1 class="section-header">
@@ -234,9 +205,45 @@
         </div>
     </div>
 </div>
+
+
+<div class="container" id="contact">
+    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
+        <h1>Formularz kontaktowy</h1>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <ul class="contact_form">
+                <li class="contact_form_list"><input type="text" name="imie" placeholder="Imię (wymagane)" required>
+                </li>
+                <li class="contact_form_list"><input type="text" name="nazwisko" placeholder="Nazwisko (wymagane)"
+                                                     required>
+                </li>
+                <li class="contact_form_list"><input type="email" name="email" placeholder="adres e-mail (wymagane)"
+                                                     required></li>
+                <li class="contact_form_list"><input type="text" name="telefon" placeholder="Nr tel (opcjonalnie)"></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <ul class="contact_form">
+                <li class="contact_form_list"><textarea name="tekst" id="tekst" rows="5"
+                                                        placeholder="Wpisz tutaj treść (wymagane)" required></textarea>
+                </li>
+                <li class="contact_form_list">
+                    <button type="submit"> Wyślij</button>
+                </li>
+            </ul>
+        </div>
+    </form>
+    <!--TODO MAPKA-->
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=aleja+Grunwaldzka+472B,+80-309+Gda%C5%84sk&zoom=12&scale=1&size=350x197&maptype=roadmap&format=png&visual_refresh=true" class="map">
+    </div>
+</div>
+
+
 <footer class="text-center">
     &copy; NPND Team
 </footer>
+
 <script>
     (function () {
         showCookieInfo();
