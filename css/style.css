@@ -165,3 +165,33 @@ footer {
     .hero-text, .hero-content > a {
         transform: translate(0px, 40vh)
     }}
+#contact_info {
+    background-color: rgba(240, 240, 240, 0.5);
+    position: absolute;
+    left: 10.6%;
+    top: 0;
+    right: 10.5%;
+    text-align: left;
+    transition: background-color .5s ease-in-out;
+}
+#contact_info:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+img.map {
+    position: relative;
+}
+hr.separator {
+    margin-bottom: 0 !important;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.thumbnail {
+    height:51rem;
+}
+#authors .thumbnail .btn {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
