@@ -3,8 +3,9 @@
 }
 
 body {
-   position: relative;
+    position: relative;
     font-family: sans-serif;
+    min-width: 345px;
 }
 
 .top1 {
@@ -86,9 +87,6 @@ h1 > small{
 }
 .hero-text, .hero-content > a {
     transform: translate(0px,45vh)
-}
-#features i.fa {
-    position: absolute;
 }
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
