@@ -24,6 +24,7 @@ h1 > small{
     top: 200px;
     z-index: 7000;
 }
+
 #copywright {
     height: 2rem;
 }
@@ -37,6 +38,9 @@ h1 > small{
         left: 50%;
         transform: translateX(-50%);
         z-index: 7000;
+    }
+    #social_media a{
+        text-decoration: none;
     }
     #copywright {
         height: 5rem;
@@ -269,4 +273,10 @@ footer p {
 #footer_menu a:active:before, #footer_menu a:focus:before, #footer_menu a:hover:before {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
+}
+@media screen and (min-width:615px) and (max-width:991px) {
+    #contact_info {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
