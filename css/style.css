@@ -24,6 +24,7 @@ h1 > small{
     top: 200px;
     z-index: 7000;
 }
+
 #copywright {
     height: 2rem;
 }
@@ -37,6 +38,9 @@ h1 > small{
         left: 50%;
         transform: translateX(-50%);
         z-index: 7000;
+    }
+    #social_media a{
+        text-decoration: none;
     }
     #copywright {
         height: 5rem;
