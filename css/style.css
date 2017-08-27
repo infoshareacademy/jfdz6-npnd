@@ -269,3 +269,9 @@ footer p {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
 }
+@media screen and (min-width:615px) and (max-width:991px) {
+    #contact_info {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
