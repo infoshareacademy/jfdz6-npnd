@@ -3,8 +3,9 @@
 }
 
 body {
-   position: relative;
+    position: relative;
     font-family: sans-serif;
+    min-width: 345px;
 }
 
 .top1 {
@@ -22,6 +23,24 @@ h1 > small{
     position: fixed;
     top: 200px;
     z-index: 7000;
+}
+#copywright {
+    height: 2rem;
+}
+@media screen and (max-width: 800px) {
+    #social_media {
+        width: auto;
+        background: transparent;
+        position: absolute;
+        bottom: 0;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 7000;
+    }
+    #copywright {
+        height: 5rem;
+    }
 }
 #tekst {
     width: 100%;
@@ -88,9 +107,6 @@ h1 > small{
 .hero-text, .hero-content > a {
     transform: translate(0px,45vh)
 }
-#features i.fa {
-    position: absolute;
-}
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
@@ -115,7 +131,6 @@ h1 > small{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
     background: #f0f0f0;
     color: black;
     z-index: 1000;
@@ -126,12 +141,21 @@ h1 > small{
 }
 #cookieInfo span{
     position: absolute;
-    left: 96%;
-    top: 10px;
-    font-size: 30px;
+    font-size: 22px;
     color: black;
     cursor: pointer;
+    display: block;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 1);
 }
+
 .map {
     max-width: 100%;
     max-height: 300px;
@@ -158,3 +182,91 @@ footer {
     .hero-text, .hero-content > a {
         transform: translate(0px, 40vh)
     }}
+#contact_info {
+    background-color: rgba(240, 240, 240, 0.5);
+    position: absolute;
+    left: 10.6%;
+    top: 0;
+    right: 10.5%;
+    text-align: left;
+    transition: background-color .5s ease-in-out;
+}
+#contact_info:hover {
+    background-color: rgba(240, 240, 240, 1);
+}
+img.map {
+    position: relative;
+}
+hr.separator {
+    margin-bottom: 0 !important;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.thumbnail {
+    height:51rem;
+}
+#authors .thumbnail .btn {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#home_button {
+    bottom: 5%;
+    left: 10%;
+    border: solid;
+    outline: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+footer p {
+    text-align: center;
+}
+#footer_menu a {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s
+}
+#footer_menu a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #337ab7;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
+}
+#footer_menu a:active, #footer_menu a:focus, #footer_menu a:hover {
+    color: #fff;
+}
+#footer_menu a:active:before, #footer_menu a:focus:before, #footer_menu a:hover:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}

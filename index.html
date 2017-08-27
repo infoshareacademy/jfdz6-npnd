@@ -47,12 +47,12 @@
                     </li>
 
                     <li>
-                        <a href="#authors" class="hidden-xs">O nas</a>
-                        <a href="#authors" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">O nas</a>
+                        <a href="#contact" class="hidden-xs">Kontakt</a>
+                        <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Kontakt</a>
                     </li>
                     <li>
-                        <a href="#contact" class="hidden-xs">O nas</a>
-                        <a href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">Kontakt</a>
+                        <a href="#authors" class="hidden-xs">O nas</a>
+                        <a href="#authors" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">O nas</a>
                     </li>
                 </ul>
             </div>
@@ -70,6 +70,7 @@
 
 <div id="features">
     <div class="container">
+        <div class="row">
         <div class="col-lg-12 top1">
             <h1 class="section-header">
                 Funkcje
@@ -109,9 +110,10 @@
                 wykorzystanie mnożnych i mnożników w celu otrzymania iloczynu!
                 Nikt inny nie oferuje takich rozwiązań! Naprawdę! Nawet nie szukaj tego w internecie, nie warto!</p>
         </div>
-
+        </div>
     </div>
     <div class="container">
+        <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <h2 class="hidden-md hidden-sm hidden-xs">Podbij z nami WIG20!
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -140,9 +142,10 @@
                 a coś spada? Pożegnaj strach na dobre! Wykorzystując rekomendacje dyktowane przez Analizator Finansowy
                 możesz zapomnieć o myśleniu i oddać się zarabianiu!</p>
         </div>
+        </div>
     </div>
 </div>
-
+<hr class="separator">
 <div id="social_media">
     <a href="https://www.facebook.com/">
         <i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
@@ -155,6 +158,37 @@
     </a>
 </div>
 
+<div class="container" id="contact">
+    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
+        <h1>Formularz kontaktowy</h1>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="contact_form_list form-group col-md-6">
+                    <input class="form-control" type="text" name="imie" placeholder="Imię (wymagane)" required>
+                </div>
+                <div class="contact_form_list form-group col-md-6">
+                    <input class="form-control" type="email" name="email" placeholder="adres e-mail (wymagane)"
+                           required>
+                </div>
+            </div>
+            <div class="row text-center">
+                <textarea class="form-control" name="tekst" id="tekst" rows="5"></textarea>
+                <button type="submit" class="btn btn-primary form-submit-button"> Wyślij</button>
+            </div>
+        </div>
+    </form>
+    <!--TODO MAPKA-->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=aleja+Grunwaldzka+472B,+80-309+Gda%C5%84sk&zoom=12&scale=1&size=450x220&maptype=roadmap&format=png&visual_refresh=true"
+             class="map">
+            <div id="contact_info"><p>Kartel NPND,
+                ul. Testowa 77,
+                Kambodża,
+                Tel. 000 000 000</p>
+            </div>
+    </div>
+</div>
+<hr class="separator">
 <!-- o Nas! !-->
 <div class="container section" id="authors">
     <h1 class="section-header">
@@ -220,52 +254,18 @@
     </div>
 </div>
 
-
-<div class="container" id="contact">
-    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
-        <h1>Formularz kontaktowy</h1>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="row">
-                <div class="contact_form_list form-group col-md-6">
-                    <input class="form-control" type="text" name="imie" placeholder="Imię (wymagane)" required>
-                </div>
-                <div class="contact_form_list form-group col-md-6">
-                    <input class="form-control" type="email" name="email" placeholder="adres e-mail (wymagane)"
-                                                     required>
-                </div>
-            </div>
-            <div class="row text-center">
-                <textarea class="form-control" name="tekst" id="tekst" rows="5"></textarea>
-                <button type="submit" class="btn btn-primary form-submit-button"> Wyślij</button>
-            </div>
-        </div>
-    </form>
-    <!--TODO MAPKA-->
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=aleja+Grunwaldzka+472B,+80-309+Gda%C5%84sk&zoom=12&scale=1&size=450x220&maptype=roadmap&format=png&visual_refresh=true"
-             class="map">
-    </div>
-</div>
 <footer>
     <div class="container">
-        <div class="col-sm-4 col-xs-12">
-            <h5>Kontakt</h5>
-            <ul class="f-contact">
-                <li>
-                    <p>Kartel NPND</p>
-                    <p>ul. Testowa 77</p>
-                    <p>Kambodża</p>
-                </li>
-                <li>
-                    <p>Tel. 000 000 000</p>
-                </li>
-            </ul>
-            &copy; NPND Team
+        <div id="footer_menu">
+            <a href="#top">Home</a>
+            <a href="#features">Funkcje</a>
+            <a href="#contact">Kontakt</a>
+            <a href="#authors">O nas</a>
         </div>
+            <div id="copywright"><p>&copy; NPND Team</p><div>
     </div>
-
-
 </footer>
+
 <script>
     (function () {
         showCookieInfo();
