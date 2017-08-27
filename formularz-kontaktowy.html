@@ -10,9 +10,32 @@
 <body>
 <div id="hero" class="img-responsive">
     <div class="hero-content">
-        <h1 class="hero-text btn btn-primary btn-lg" style="background-color: #337ab7">Opiekun strony skontaktuje się z Tobą żebyś mógł zarabiać </h1>
+        <h1 class="hero-text" >Opiekun strony skontaktuje się z Tobą żebyś mógł zarabiać </h1>
+        <h2 class="hero-text" >powrócisz na stronę główną w ciągu <span id="time">5</span> sekund</h2>
     </div>
 </div>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script>
+    function startTimer(duration, display) {
+        var timer = duration, seconds;
+        setInterval(function () {
+            seconds = parseInt(timer % 60, 10);
+            display.text(seconds);
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    jQuery(function ($) {
+        var czas = 5,
+            display = $('#time');
+        startTimer(czas, display);
+    });
+</script>
 
 </body>
 </html>
