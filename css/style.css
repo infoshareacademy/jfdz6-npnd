@@ -59,7 +59,7 @@ h1 > small{
     padding-right: 8px;
 }
 .contact_form_list {
-    padding: 8px 0px 8px 0px;
+    padding: 8px 0;
 }
 .img-logo { /* TODO czy używać klasy tylko do jednego logo? */
     width: 200px;
