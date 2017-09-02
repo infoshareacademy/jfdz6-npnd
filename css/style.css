@@ -9,9 +9,7 @@ body {
 .container {
     min-width: 345px;
 }
-.top1 {
-    height: 100px;
-}
+
 h1{
     margin-top: 62px;
 }
@@ -62,11 +60,7 @@ h1 > small{
     width: 100%;
     height: 100%;
 }
-.contact_form {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+
 .contact_form_list:first-child {
     padding-right: 8px;
 }
@@ -111,13 +105,14 @@ h1 > small{
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    min-width:345px;
 }
 .hero-content {
     height:  100%;
     position: relative;
     text-align: center;
     color: white;
+
 }
 .hero-text, .hero-content > a {
     transform: translate(0px,45vh)
@@ -227,19 +222,7 @@ hr.separator {
     left: 50%;
     transform: translateX(-50%);
 }
-#home_button {
-    bottom: 5%;
-    left: 10%;
-    border: solid;
-    outline: none;
-    background-color: blue;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50px;
-    font-weight: bold;
-    display: inline-block;
-}
+
 footer p {
     text-align: center;
 }
