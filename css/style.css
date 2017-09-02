@@ -73,7 +73,7 @@ h1 > small{
 .contact_form_list {
     padding: 8px 0;
 }
-.img-logo { /* TODO czy używać klasy tylko do jednego logo? */
+.img-logo {
     width: 200px;
     height: 50px;
 }
@@ -97,7 +97,7 @@ h1 > small{
     background-color: #fff;
 
 }
-.navbar-default .navbar-nav>li>a:active /* TODO nie działa   */
+.navbar-default .navbar-nav>li>a:active
 {
     color: #af000a;
     background-color: #fff;
