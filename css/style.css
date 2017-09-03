@@ -5,9 +5,7 @@
 body {
     position: relative;
     font-family: sans-serif;
-}
-.container {
-    min-width: 345px;
+    min-width: 250px;
 }
 
 h1{
@@ -105,7 +103,6 @@ h1 > small{
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-width:345px;
 }
 .hero-content {
     height:  100%;
@@ -126,16 +123,7 @@ h1 > small{
     top: 15px;
     right: 15px;
 }
-@media(max-width:768px) {
-    .navbar-default {
-        background: #f0f0f0;
-        font-size: 14px;
-    }
 
-    footer {
-        text-align: center;
-    }
-}
 #cookieInfo{
     position: fixed;
     bottom: 0;
@@ -277,5 +265,18 @@ footer p {
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .thumbnail {
         height: 59rem;
+    }
+}
+@media(max-width:768px) {
+    .navbar-default {
+        background: #f0f0f0;
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+    }
+    .thumbnail {
+        height:auto;
     }
 }
