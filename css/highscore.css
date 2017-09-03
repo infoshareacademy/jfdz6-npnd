@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'game_over';
+    src: url('../fonts/game_over.eot');
+    src: local('☺'), url('../fonts/game_over.woff') format('woff'), url('../fonts/game_over.ttf') format('truetype'), url('../fonts/game_over.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.high
+{
+    font-family: "game_over";
+    font-size: 1em;
+}
