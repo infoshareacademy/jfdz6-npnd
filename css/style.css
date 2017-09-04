@@ -280,3 +280,7 @@ footer p {
         height:auto;
     }
 }
+.fa-arrow-circle-up {
+    color: rgb(51,122,183);
+    text-decoration: none;
+}
