@@ -176,7 +176,20 @@
             </div>
             <div class="row text-center">
                 <textarea class="form-control" name="tekst" id="tekst" rows="5"></textarea>
-                <button type="submit" class="btn btn-primary form-submit-button"> Wyślij</button>
+
+            </div>
+            <div class="row text-center">
+                <div class=" contact_form_list form-group col-lg-7 col-md-6 col-sm-6 col-xs-6">
+                 <label>Podaj wynik dodawania
+                        <span id="param1"></span> +
+                        <span id="param2"></span>
+                 </label>
+                </div>
+                <div class="contact_form_list form-group col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <input class="form-control" type="text" name="checksum" id="checksum" placeholder="Wynik" required>
+                </div>
+                <div class="text-right col-lg-3 col-md-4 col-sm-12 col-xs-12"><button type="submit" onclick="return antibot()" class="btn btn-primary form-submit-button"> Wyślij</button></div>
+
             </div>
         </div>
     </form>
@@ -275,7 +288,23 @@
         <div id="copywright"><p>&copy; NPND Team</p></div>
     </div>
 </footer>
-
+<script>
+    var param1 = Math.floor(Math.random() * 10) + 1;
+    var param2 = Math.floor(Math.random() * 15) + 5;
+    document.getElementById("param1").innerHTML = param1;
+    document.getElementById("param2").innerHTML = param2;
+    function antibot(){
+        var sum = (param1 + param2);
+        var checksum = document.getElementById("checksum").value;
+        if(checksum != sum){
+            document.getElementById("comment").innerHTML = "Naucz się dodawać";
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 <script>
     (function () {
         showCookieInfo();
