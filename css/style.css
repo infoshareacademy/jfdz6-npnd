@@ -49,6 +49,7 @@ h1 > small{
         top: auto;
         left: 50%;
         transform: translateX(-50%);
+
     }
     #copywright {
         height: 5rem;
@@ -74,6 +75,7 @@ h1 > small{
 {
     background: #f0f0f0;
     font-size: 20px;
+    z-index: 1000000000;
 }
 .navbar-fixed-top {
     top: 0;
@@ -96,23 +98,16 @@ h1 > small{
 }
 #hero {
     position: relative;
-    overflow: hidden;
-    background-image: url("https://descubriendotalento.files.wordpress.com/2017/06/2797.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 .hero-content {
     height:  100%;
     position: relative;
     text-align: center;
-    color: white;
-
+    color: #004276;
+    z-index: 100000000;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,45vh)
+    transform: translate(0px,35vh);
 }
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
@@ -179,6 +174,11 @@ footer {
 
     .hero-text, .hero-content > a {
         transform: translate(0px, 40vh)
+    }}
+@media only screen and (min-width: 1025px) {
+
+    .hero-text, .hero-content > a {
+        transform: translate(0px, 55vh)
     }}
 #contact_info {
     background-color: rgba(240, 240, 240, 0.5);
@@ -277,7 +277,7 @@ footer p {
         text-align: center;
     }
     .thumbnail {
-        height:auto;
+        height:45rem;
     }
 }
 .navbar .fa-arrow-circle-up {
