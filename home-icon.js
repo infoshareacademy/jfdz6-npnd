@@ -1,14 +1,11 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+    topButtonFunction()
+};
 
-function scrollFunction() {
+function topButtonFunction() {
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("topBtn").style.display = "block";
     } else {
-        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("topBtn").style.display = "none";
     }
-}
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
 }

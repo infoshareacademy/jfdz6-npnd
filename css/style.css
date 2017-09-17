@@ -281,7 +281,7 @@ footer p {
     }
 }
 
-#myBtn {
+#topBtn {
     opacity: 0.8;
     color: rgb(51,122,183);
     display: none;
@@ -291,7 +291,7 @@ footer p {
     z-index: 99;
 
 }
-#myBtn:hover {
+#topBtn:hover {
     color: rgb(35,80,120);
     opacity: 1;
 }
