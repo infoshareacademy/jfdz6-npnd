@@ -280,28 +280,20 @@ footer p {
         height:45rem;
     }
 }
-.navbar .fa-arrow-circle-up {
+
+#topBtn {
+    opacity: 0;
     color: rgb(51,122,183);
-    text-decoration: none;
-    padding-left: 2rem;
-    padding-top: 0.5rem;
-}
-.navbar .fa-arrow-circle-up:hover {
-    color: rgb(35, 82, 124);
-}
-@media screen and (max-width:768px){
-    .navbar .fa-arrow-circle-up {
-        display: none;
-    }
-}
-#mobile-home-icon {
-    display: block;
-    left: 0;
-    bottom: 0;
     position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    transition: opacity .5s ease-in-out;
 }
-@media screen and (min-width: 768px) {
-    #mobile-home-icon {
-        display: none;
-    }
+#topBtn.active {
+    color: rgb(35,80,120);
+    opacity: 0.8;
+}
+#topBtn.active:hover {
+    opacity: 1;
 }
