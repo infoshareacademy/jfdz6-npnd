@@ -360,3 +360,6 @@ nav.navbar.shrink .navbar-toggle {
     transform: translateY(25%);
     transition: all 0.3s ease;
 }
+.img-logo.shrinkOut {
+    transition: all 0.3s ease-out;
+}

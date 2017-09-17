@@ -10,6 +10,6 @@ function topButtonFunction() {
     } else {
         $('#topBtn').removeClass('active');
         $('.navbar').removeClass('shrink');
-        $('.img-logo').removeClass('shrink');
+        $('.img-logo').removeClass('shrink').addClass('shrinkOut');
     }
 }
