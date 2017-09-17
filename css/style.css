@@ -283,7 +283,6 @@ footer p {
 
 #topBtn {
     opacity: 0;
-    color: rgb(51,122,183);
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -291,9 +290,10 @@ footer p {
     transition: opacity .5s ease-in-out;
 }
 #topBtn.active {
-    color: rgb(35,80,120);
+    color: rgb(51,122,183);
     opacity: 0.8;
 }
 #topBtn.active:hover {
+    color: rgb(35,80,120);
     opacity: 1;
 }
