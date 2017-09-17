@@ -16,7 +16,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css"/>
-    <script src="cookies.js"></script>
     <title>Analizator finansowy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,9 +35,9 @@
                 <img src="img/logo_400x100_nobg.png" class="img-responsive img-logo">
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <a href="#top">
-                    <i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>
-                </a>
+                <!--<a href="#top">-->
+                <!--<i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>-->
+                <!--</a>-->
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#features" class="hidden-xs">Funkcje</a>
@@ -280,11 +279,12 @@
         </div>
     </div>
 </div>
-<div id="mobile-home-icon">
-    <a href="#top">
-        <i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i>
-    </a>
-</div>
+
+<a href="#top">
+    <i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true" id="topBtn" title="Go to top">
+    </i>
+</a>
+
 <footer>
     <div class="container">
         <div id="footer_menu">
@@ -318,5 +318,7 @@
         showCookieInfo();
     }());
 </script>
+<script src="home-icon.js"></script>
+<script src="cookies.js"></script>
 </body>
 </html>
