@@ -37,10 +37,11 @@ h1 > small{
         left: 50%;
         transform: translateX(-50%);
     }
+}
     #copywright {
         height: 5rem;
     }
-}
+
 @media screen and (min-width: 992px) and (max-width:1030px) {
     #social_media {
         width: auto;
@@ -179,7 +180,30 @@ footer {
 
     .hero-text, .hero-content > a {
         transform: translate(0px, 55vh)
-    }}
+    }
+    .zoom {
+        -webkit-transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        transition: all 0.35s ease-in-out;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+        cursor: zoom-in;
+    }
+
+    .zoom:hover,
+    .zoom:active,
+    .zoom:focus {
+        /**adjust scale to desired size,
+        add browser prefixes**/
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+        position:relative;
+        z-index:100;
+    }
+}
 #contact_info {
     background-color: rgba(240, 240, 240, 0.5);
     position: absolute;
@@ -264,7 +288,7 @@ footer p {
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .thumbnail {
-        height: 59rem;
+        height: 62rem;
     }
 }
 @media(max-width:768px) {
@@ -277,7 +301,7 @@ footer p {
         text-align: center;
     }
     .thumbnail {
-        height:45rem;
+        height:48rem;
     }
 }
 
@@ -450,38 +474,25 @@ footer p {
 .hvr-round-corners:hover, .hvr-round-corners:focus, .hvr-round-corners:active {
     border-radius: 1em;
 }
-.zoom {
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
-    cursor: -webkit-zoom-in;
-    cursor: -moz-zoom-in;
-    cursor: zoom-in;
-}
+/*.zoom {*/
+    /*-webkit-transition: all 0.35s ease-in-out;*/
+    /*-moz-transition: all 0.35s ease-in-out;*/
+    /*transition: all 0.35s ease-in-out;*/
+    /*cursor: -webkit-zoom-in;*/
+    /*cursor: -moz-zoom-in;*/
+    /*cursor: zoom-in;*/
+/*}*/
 
-.zoom:hover,
-.zoom:active,
-.zoom:focus {
-    /**adjust scale to desired size,
-    add browser prefixes**/
-    -ms-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
-    position:relative;
-    z-index:100;
-}
-
-/**To keep upscaled images visible on mobile,
-increase left & right margins a bit**/
-@media only screen and (max-width: 768px) {
-    ul.gallery {
-        margin-left: 15vw;
-        margin-right: 15vw;
-    }
-
-    /**TIP: Easy escape for touch screens,
-    give gallery's parent container a cursor: pointer.**/
-    .DivName {cursor: pointer}
-}
+/*.zoom:hover,*/
+/*.zoom:active,*/
+/*.zoom:focus {*/
+    /*!**adjust scale to desired size,*/
+    /*add browser prefixes**!*/
+    /*-ms-transform: scale(1.5);*/
+    /*-moz-transform: scale(1.5);*/
+    /*-webkit-transform: scale(1.5);*/
+    /*-o-transform: scale(1.5);*/
+    /*transform: scale(1.5);*/
+    /*position:relative;*/
+    /*z-index:100;*/
+/*}*/
