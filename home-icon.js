@@ -4,8 +4,8 @@ window.onscroll = function () {
 
 function topButtonFunction() {
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-        document.getElementById("topBtn").style.display = "block";
+        $('#topBtn').addClass('active');
     } else {
-        document.getElementById("topBtn").style.display = "none";
+        $('#topBtn').removeClass('active');
     }
 }
