@@ -16,7 +16,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css"/>
-    <script src="cookies.js"></script>
     <title>Analizator finansowy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,9 +35,9 @@
                 <img src="img/logo_400x100_nobg.png" class="img-responsive img-logo">
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <a href="#top">
-                    <i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>
-                </a>
+                <!--<a href="#top">-->
+                <!--<i class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i>-->
+                <!--</a>-->
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#features" class="hidden-xs">Funkcje</a>
@@ -162,7 +161,7 @@
 </div>
 
 <div class="container" id="contact">
-    <form method="get" action="formularz-kontaktowy.html" onSubmit="alert('Zadzwonimy, żebyś zarobił')">
+    <form method="get" action="formularz-kontaktowy.html">
         <h1>Formularz kontaktowy</h1>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="row">
@@ -176,7 +175,24 @@
             </div>
             <div class="row text-center">
                 <textarea class="form-control" name="tekst" id="tekst" rows="5"></textarea>
-                <button type="submit" class="btn btn-primary form-submit-button"> Wyślij</button>
+
+            </div>
+            <div class="row text-center">
+                <div class=" contact_form_list form-group col-lg-7 col-md-6 col-sm-6 col-xs-6">
+                 <label>Podaj wynik dodawania
+                        <span id="param1"></span> +
+                        <span id="param2"></span>
+
+                 </label>
+                    <p><span id="comment"></span></p>
+                </div>
+                <div class="contact_form_list form-group col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <input class="form-control" type="text" name="checksum" id="checksum" placeholder="Wynik" required>
+                </div>
+                <div class="text-right col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <button type="submit" onclick="return antibot()" class="btn btn-primary form-submit-button"> Wyślij</button>
+                </div>
+
             </div>
         </div>
     </form>
@@ -210,7 +226,8 @@
                     W bogactwie najlepsze jest to, że nie trzeba zadawać się z biedakami i można zatrudniać ludzi, żeby
                     zarabiać jeszcze więcej pieniędzy. </p>
                 <p>
-                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                    <button type="button" class="btn btn-primary"
+                            onclick="location.href='mailto:natalia@analizatorfinansowy.pl';">Napisz wiadomość</button>
                 </p>
             </div>
         </div>
@@ -224,7 +241,8 @@
                     Gekko jest moim prawdziwym tatą. Zarabianie pieniędzy to moja pasja, zarabianie pieniędzy
                     cudzymi pieniędzmi to moje powołanie, pozwól mi uczynić Ciebie bogatym! </p>
                 <p>
-                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                    <button type="button" class="btn btn-primary"
+                            onclick="location.href='mailto:nikodem@analizatorfinansowy.pl';">Napisz wiadomość</button>
                 </p>
             </div>
         </div>
@@ -238,7 +256,8 @@
                     Doradzę jak defraudować fundusze, szantażować czy wymuszać haracze.
                     Jeśli chcesz dorobić się na krzywdzie innych to idealnie trafiłeś</p>
                 <p>
-                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                    <button type="button" class="btn btn-primary"
+                            onclick="location.href='mailto:dawid@analizatorfinansowy.pl';">Napisz wiadomość</button>
                 </p>
             </div>
         </div>
@@ -253,17 +272,19 @@
                     wieku lat 13. Obecnie, dzięki zastosowaniu nieograniczonych możliwości
                     jakie daje Internet, mogę to umożliwić milionom innym ludziom.</p>
                 <p>
-                    <button type="button" class="btn btn-primary">Napisz wiadomość</button>
+                    <button type="button" class="btn btn-primary" ;
+                            onclick="location.href='mailto:piotr@analizatorfinansowy.pl';">Napisz wiadomość</button>
                 </p>
             </div>
         </div>
     </div>
 </div>
-<div id="mobile-home-icon">
-    <a href="#top">
-        <i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i>
-    </a>
-</div>
+
+<a href="#top">
+    <i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true" id="topBtn" title="Go to top">
+    </i>
+</a>
+
 <footer>
     <div class="container">
         <div id="footer_menu">
@@ -275,11 +296,29 @@
         <div id="copywright"><p>&copy; NPND Team</p></div>
     </div>
 </footer>
-
+<script>
+    var param1 = Math.floor(Math.random() * 10) + 1;
+    var param2 = Math.floor(Math.random() * 15) + 5;
+    document.getElementById("param1").innerHTML = param1;
+    document.getElementById("param2").innerHTML = param2;
+    function antibot(){
+        var sum = (param1 + param2);
+        var checksum = document.getElementById("checksum").value;
+        if(checksum != sum){
+            document.getElementById("comment").innerHTML = "Naucz się dodawać";
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 <script>
     (function () {
         showCookieInfo();
     }());
 </script>
+<script src="home-icon.js"></script>
+<script src="cookies.js"></script>
 </body>
 </html>
