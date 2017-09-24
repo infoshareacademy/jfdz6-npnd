@@ -8,9 +8,6 @@ body {
     min-width: 250px;
 }
 
-h1{
-    margin-top: 62px;
-}
 .hero-content h1 {
     margin-top: 0px;
 }
@@ -104,14 +101,14 @@ h1 > small{
     position: relative;
 }
 .hero-content {
-    height: 0;
+    height: 100%;
     position: relative;
     text-align: center;
     color: #004276;
     z-index: 100000000;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,10vh);
+    transform: translate(0px,35vh);
 }
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
@@ -223,7 +220,7 @@ hr.separator {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 .thumbnail {
-    height: 48rem;
+    height: 51rem;
 }
 #authors .thumbnail .btn {
     position: absolute;
