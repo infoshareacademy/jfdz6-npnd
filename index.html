@@ -209,21 +209,24 @@
 
             </div>
             <div class="row text-center">
-                <div class=" contact_form_list form-group col-lg-7 col-md-6 col-sm-6 col-xs-6">
-                    <label>Podaj wynik dodawania
+
+                <div class=" contact_form_list form-group col-lg-7 col-md-7 col-sm-7 col-xs-8">
+                 <label>Podaj wynik dodawania
+
                         <span id="param1"></span> +
                         <span id="param2"></span>
 
                     </label>
                     <p><span id="comment"></span></p>
                 </div>
-                <div class="contact_form_list form-group col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                <div class="contact_form_list form-group col-lg-2 col-md-2 col-sm-2 col-xs-4">
                     <input class="form-control" type="text" name="checksum" id="checksum" placeholder="Wynik" required>
                 </div>
-                <div class="text-right col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <div class="text-center col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <button type="submit" onclick="return antibot()" class="btn btn-primary form-submit-button">
-                        Wyślij
-                    </button>
+                      Wyślij
+                   </button>
+
                 </div>
 
             </div>
@@ -344,7 +347,7 @@
     function antibot() {
         var sum = (param1 + param2);
         var checksum = document.getElementById("checksum").value;
-        if (checksum != sum) {
+        if (checksum !== sum) {
             document.getElementById("comment").innerHTML = "Naucz się dodawać";
             return false;
         }
