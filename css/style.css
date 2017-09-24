@@ -101,7 +101,7 @@ h1 > small{
     position: relative;
 }
 .hero-content {
-    height: 100%;
+    height: 0;
     position: relative;
     text-align: center;
     color: #004276;
