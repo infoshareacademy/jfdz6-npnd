@@ -16,51 +16,8 @@ h1 > small {
     display: block;
 }
 
-#social_media {
-    width: 40px;
-    background: transparent;
-    position: fixed;
-    top: 200px;
-    z-index: 7000;
-}
-
-#social_media a {
-    text-decoration: none;
-}
-
 #copywright {
     height: 2rem;
-}
-
-@media screen and (max-width: 800px) {
-    #social_media {
-        width: auto;
-        position: absolute;
-        bottom: 0;
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    #copywright {
-        height: 5rem;
-    }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1030px) {
-    #social_media {
-        width: auto;
-        position: absolute;
-        bottom: 0;
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-
-    }
-
-    #copywright {
-        height: 5rem;
-    }
 }
 
 #tekst {
@@ -120,7 +77,7 @@ h1 > small {
 }
 
 .hero-text, .hero-content > a {
-    transform: translate(0px,35vh);
+    transform: translate(0px, 35vh);
 }
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
@@ -192,12 +149,16 @@ footer {
 
     .hero-text, .hero-content > a {
         transform: translate(0px, 40vh)
-    }}
+    }
+}
+
 @media only screen and (min-width: 1025px) {
 
     .hero-text, .hero-content > a {
         transform: translate(0px, 55vh)
-    }}
+    }
+}
+
 #contact_info {
     background-color: rgba(240, 240, 240, 0.5);
     position: absolute;
@@ -308,7 +269,7 @@ footer p {
     }
 
     .thumbnail {
-        height:45rem;
+        height: 45rem;
     }
 }
 
@@ -367,4 +328,39 @@ nav.navbar.shrink .navbar-toggle {
 
 .img-logo.shrinkOut {
     transition: all 0.3s ease-out;
+}
+
+#social_media a {
+    text-decoration: none;
+}
+
+#social_media {
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 769px) {
+    #social_media {
+        width: 40px;
+        background: transparent;
+        position: fixed;
+        top: 40vh;
+        z-index: 7000;
+        transform: none;
+        left: 0;
+        font-size: large;
+    }
+    #social_media a:hover {
+        font-size: xx-large;
+        transition: all 0.4s ease-in-out;
+    }
+}
+@media screen and (max-width: 768px) {
+    #copywright {
+       height: 5rem;
+    }
 }
