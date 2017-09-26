@@ -355,7 +355,7 @@
     function antibot() {
         var sum = (param1 + param2);
         var checksum = document.getElementById("checksum").value;
-        if (checksum !== sum) {
+        if (checksum != sum) {
             document.getElementById("comment").innerHTML = "Naucz się dodawać";
             return false;
         }
