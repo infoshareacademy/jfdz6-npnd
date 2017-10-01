@@ -512,3 +512,11 @@ nav.navbar.shrink .navbar-toggle {
        height: 5rem;
     }
 }
+.cell {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+}
+.player-cell {
+    background-color: blue;
+}
