@@ -7,8 +7,6 @@ var authors = document.getElementById('authors');
 
 function toggleTitle() {
 
-    console.log('scroll top', document.body.scrollTop);
-
     if (isAbove(features)){
         setTitle('Analizator finansowy');
     } else if (isBelow(features) && isAbove(contact)) {
