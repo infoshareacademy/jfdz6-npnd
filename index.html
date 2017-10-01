@@ -354,8 +354,8 @@
 
     function antibot() {
         var sum = (param1 + param2);
-        var checksum = document.getElementById("checksum").value;
-        if (checksum != sum) {
+        var checksum = parseInt(document.getElementById("checksum").value);
+        if (checksum !== sum) {
             document.getElementById("comment").innerHTML = "Naucz się dodawać";
             return false;
         }
@@ -364,13 +364,37 @@
         }
     }
 </script>
+
 <script>
-    (function () {
-        showCookieInfo();
+    /*
+    var myOnScroll = (function(){
+        var func = [];
+        return {
+            addFunc : function(f){
+                func.push(f);
+            },
+            onScroll : function(){
+                func.forEach(function(f){
+                    f();
+                });
+                console.log('TOP', document.body.scrollTop);
+            }
+        }
     }());
+    window.onscroll = myOnScroll.onScroll;
+    myOnScroll.addFunc( function(){ document.body.style.background = 'rgb(' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) + ',' + parseInt(Math.random()*255) + ')' })
+    //*/
 </script>
 <script src="check-scroll.js"></script>
 <script src="cookies.js"></script>
-<script src="variable-title.js"></script>
+<script src="toggle-title.js"></script>
+<script>
+    // /*
+    window.onscroll = function () {
+        toggleTitle();
+        topButtonFunction();
+    };
+    // */
+</script>
 </body>
 </html>
