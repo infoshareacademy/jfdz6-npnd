@@ -520,3 +520,6 @@ nav.navbar.shrink .navbar-toggle {
 .player-cell {
     background-color: blue;
 }
+.coin-cell {
+    background-color: gold;
+}
