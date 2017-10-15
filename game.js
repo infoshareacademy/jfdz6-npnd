@@ -2,7 +2,7 @@ var $startGameButton = $('#start-game');
 $startGameButton.click(startGame);
 
 function startGame() {
-    var timer = 5;
+    var timer = 10;
     var $table = helpers.createTable(15, 20);
     var $app = $('#app'); // Find element with id = 'app'
     var $lastRowCells = $('tr:last td', $table);
@@ -26,8 +26,10 @@ function startGame() {
         $(function () {
             $startCoinPosition.addClass('coin-cell');
             $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
-        })
+        });
+        calculateScore();
     }, 1000);
+
     var coinMovement = setInterval(function () {
         $('td.coin-cell').each(function () {
             $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
@@ -38,19 +40,19 @@ function startGame() {
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
 
-function moveRight() {
-    if ($('.player-cell', $table).next().length) {
-        $('.player-cell', $table).removeClass('player-cell').next().addClass('player-cell');
-        calculateScore();
+    function moveRight() {
+        if ($('.player-cell', $table).next().length) {
+            $('.player-cell', $table).removeClass('player-cell').next().addClass('player-cell');
+            calculateScore();
+        }
     }
-}
 
-function moveLeft() {
-    if ($('.player-cell', $table).prev().length) {
-        $('.player-cell', $table).removeClass('player-cell').prev().addClass('player-cell');
-        calculateScore();
+    function moveLeft() {
+        if ($('.player-cell', $table).prev().length) {
+            $('.player-cell', $table).removeClass('player-cell').prev().addClass('player-cell');
+            calculateScore();
+        }
     }
-}
 
     $(window).on('keydown', function (event) {
         if (event.keyCode === 39) {
@@ -70,22 +72,16 @@ function moveLeft() {
             $startGameButton.show();
         }
         console.log(timer)
-    }, 1000)
-}
+    }, 1000);
 
-setInterval(function () {
-    $('td.coin-cell').each(function () {
-        $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
-    });
-    calculateScore();
-}, 1000);
+    function calculateScore() {
 
-function calculateScore() {
-
-    var pointCell = $('td.coin-cell.player-cell', $table);
-    if (pointCell.length) {
-        pointCell.removeClass('coin-cell');
-        points++;
+        var pointCell = $('td.coin-cell.player-cell', $table);
+        if (pointCell.length) {
+            pointCell.removeClass('coin-cell');
+            points++;
+            timer+=2;
+        }
+        $('.score').text(points);
     }
-    $('.score').text(points);
 }
