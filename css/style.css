@@ -512,14 +512,21 @@ nav.navbar.shrink .navbar-toggle {
        height: 5rem;
     }
 }
+#app > table{
+    background-image: url('https://i.imgur.com/UZKEjzG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .cell {
-    border: 1px solid black;
     width: 30px;
     height: 30px;
 }
-.player-cell {
-    background-color: blue;
-}
 .coin-cell {
     background-color: gold;
+    border-radius: 50%;
+    background-image: url('../img/favicon/favicon-32x32.png');
+    background-repeat: no-repeat;
+}
+.player-cell {
+    background-color: blue;
 }
