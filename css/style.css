@@ -521,14 +521,16 @@ nav.navbar.shrink .navbar-toggle {
     width: 30px;
     height: 30px;
 }
+
 .coin-cell {
-    background-color: gold;
     border-radius: 50%;
-    background-image: url('../img/favicon/favicon-32x32.png');
-    background-repeat: no-repeat;
+    background-image: url('../img/favicon/favicon-32x32.png'), radial-gradient(farthest-corner at 40px 40px,
+    #fef6f3 20%, #fed600 80%);
 }
 .player-cell {
-    background-color: blue;
+    background-image: url('http://d3q5x9z5q0y6mi.inscname.net/images/e40cabc89bdc181af3b2f48c6af31ede/550520090719203756!Blackmage-ff1-nes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .score {
     position: absolute;
