@@ -1,10 +1,10 @@
 var $app = $('#app'); // Find element with id = 'app'
-var $table = helpers.createTable(20, 20);
+var $table = helpers.createTable(10, 10);
 var $lastRowCells = $('tr:last td', $table);
 var $startPlayerPosition = $lastRowCells.eq(parseInt($lastRowCells.length / 2));
 var $firstRowCells = $('tr:first td', $table);
 var $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
-
+var points = 0;
 
 $('td', $table).addClass('cell');
 $(function () {
@@ -26,12 +26,14 @@ $app.append($table);
 function moveRight() {
     if ($('.player-cell', $table).next().length) {
         $('.player-cell', $table).removeClass('player-cell').next().addClass('player-cell');
+        calculateScore();
     }
 }
 
 function moveLeft() {
     if ($('.player-cell', $table).prev().length) {
         $('.player-cell', $table).removeClass('player-cell').prev().addClass('player-cell');
+        calculateScore();
     }
 }
 
@@ -50,14 +52,14 @@ setInterval(function () {
         $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
     });
     calculateScore();
-}, 500);
+}, 1000);
 
 function calculateScore() {
-    var points = 0;
+
     var pointCell = $('td.coin-cell.player-cell', $table);
     if (pointCell.length) {
-        points++;
         pointCell.removeClass('coin-cell');
+        points++;
     }
     $('.score').text(points);
 }
