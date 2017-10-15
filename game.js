@@ -5,6 +5,7 @@ var $startPlayerPosition = $lastRowCells.eq(parseInt($lastRowCells.length / 2));
 var $firstRowCells = $('tr:first td', $table);
 var $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
 
+
 $('td', $table).addClass('cell');
 $(function () {
     $startPlayerPosition.addClass('player-cell');
@@ -47,5 +48,16 @@ $(window).on('keydown', function (event) {
 setInterval(function () {
     $('td.coin-cell').each(function () {
         $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
-    })
-}, 100);
+    });
+    calculateScore();
+}, 500);
+
+function calculateScore() {
+    var points = 0;
+    var pointCell = $('td.coin-cell.player-cell', $table);
+    if (pointCell.length) {
+        points++;
+        pointCell.removeClass('coin-cell');
+    }
+    $('.score').text(points);
+}
