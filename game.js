@@ -46,19 +46,19 @@ function startGame() {
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
 
-    function moveRight() {
-        if ($('.player-cell', $table).next().length) {
-            $('.player-cell', $table).removeClass('player-cell').next().addClass('player-cell');
-            calculateScore();
-        }
+function moveRight() {
+    if ($('.player-cell', $table).next().length) {
+        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
     }
+    calculateScore()
+}
 
-    function moveLeft() {
-        if ($('.player-cell', $table).prev().length) {
-            $('.player-cell', $table).removeClass('player-cell').prev().addClass('player-cell');
-            calculateScore();
-        }
+function moveLeft() {
+    if ($('.player-cell', $table).prev().length) {
+        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').prev().addClass('player-cell player-cell-left');
     }
+    calculateScore()
+}
 
     $(window).on('keydown', function (event) {
         if (event.keyCode === 39) {
