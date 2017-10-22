@@ -565,14 +565,50 @@ nav.navbar.shrink .navbar-toggle {
 }
 
 .coin-cell {
-    background-color: gold;
-    border-radius: 50%;
-    background-image: url('../img/favicon/favicon-32x32.png');
-    background-repeat: no-repeat;
+    background-image: url('../img/22-color.png');
+    background-size: 110px 32px;
+}
+
+#app table tr:nth-child(7n+1) td.coin-cell {
+    background-position: -4px;
+}
+
+#app table tr:nth-child(7n+2) td.coin-cell {
+    background-position: -32px;
+}
+
+#app table tr:nth-child(7n+3) td.coin-cell {
+    background-position: -56px;
+}
+
+#app table tr:nth-child(7n+4) td.coin-cell {
+    background-position: -78px;
+}
+
+#app table tr:nth-child(7n+5) td.coin-cell {
+    background-position: -56px;
+}
+
+#app table tr:nth-child(7n+6) td.coin-cell {
+    background-position: -32px;
+}
+
+#app table tr:nth-child(7n+7) td.coin-cell {
+    background-position: -4px;
 }
 
 .player-cell {
-    background-color: blue;
+    background: url("../img/player.png") no-repeat;
+    background-size: 100px 43px;
+    background-position: -35px;
+}
+
+#app table tr td.player-cell.player-cell-left {
+    background-position: -2px;
+}
+
+#app table tr td.player-cell.player-cell-right {
+    background-position: -71px;
 }
 
 .score,

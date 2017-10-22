@@ -1,8 +1,10 @@
 var $startGameButton = $('#start-game');
 $startGameButton.click(startGame);
+var highscore;
+var $highscore;
 
 function startGame() {
-    var timer = 10;
+    var timer = 5;
     var $table = helpers.createTable(15, 20);
     var $app = $('#app'); // Find element with id = 'app'
     var $lastRowCells = $('tr:last td', $table);
@@ -17,9 +19,13 @@ function startGame() {
         $startPlayerPosition.addClass('player-cell');
     });
 
-    $startGameButton.on('click', function () {
+    function clearIntervals() {
         clearInterval(createCoin);
         clearInterval(coinMovement);
+        clearInterval(gameTimer);
+    }
+    $startGameButton.on('click', function () {
+        clearIntervals();
         $table.remove();
     });
 
@@ -42,19 +48,19 @@ function startGame() {
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
 
-    function moveRight() {
-        if ($('.player-cell', $table).next().length) {
-            $('.player-cell', $table).removeClass('player-cell').next().addClass('player-cell');
-            calculateScore();
-        }
+function moveRight() {
+    if ($('.player-cell', $table).next().length) {
+        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
+        calculateScore();
     }
+}
 
-    function moveLeft() {
-        if ($('.player-cell', $table).prev().length) {
-            $('.player-cell', $table).removeClass('player-cell').prev().addClass('player-cell');
-            calculateScore();
-        }
+function moveLeft() {
+    if ($('.player-cell', $table).prev().length) {
+        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').prev().addClass('player-cell player-cell-left');
+        calculateScore();
     }
+}
 
     $(window).on('keydown', function (event) {
         if (event.keyCode === 39) {
@@ -68,12 +74,13 @@ function startGame() {
     var gameTimer = setInterval(function () {
         timer--;
         if (timer < 0) {
-            clearInterval(gameTimer);
+            clearIntervals();
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
             $('.timer').remove();
             $('.score').remove();
             $startGameButton.show();
+            showScore(points);
         }
         console.log(timer);
         $('.timer').text("Time left: " + timer);
@@ -82,6 +89,7 @@ function startGame() {
     function calculateScore() {
 
         var pointCell = $('td.coin-cell.player-cell', $table);
+
         if (pointCell.length) {
             pointCell.removeClass('coin-cell');
             points++;
@@ -90,4 +98,27 @@ function startGame() {
         $('.score').text('Score: ' + points);
     }
 
+    highscore = JSON.parse(localStorage.getItem('wynik')) || [];
+    highscore.sort((a, b) => b - a);
+    console.log("O TO NAJLEPSZE WYNIKI: " + highscore.slice(0, 5));
+
+    function showScore(points) {
+        highscore.push(points);
+        localStorage.setItem('wynik', JSON.stringify(highscore));
+    }
+
+    function showHighscore() {
+        if (!$highscore) {
+            $highscore = $('<ol>');
+            $('.highscore').append($highscore);
+        }
+        $highscore.empty();
+        for (var i = 0; i < 5; i++) {
+            var $li = $('<li>');
+            $li.html(highscore[i]);
+            $highscore.append($li);
+        }
+        return $highscore;
+    }
+    showHighscore();
 }
