@@ -27,6 +27,9 @@ function startGame() {
     $startGameButton.on('click', function () {
         clearIntervals();
         $table.remove();
+        $('.timer').show();
+        $('.score').show();
+
     });
 
     var createCoin = setInterval(function () {
@@ -73,12 +76,12 @@ function moveLeft() {
 
     var gameTimer = setInterval(function () {
         timer--;
-        if (timer < 0) {
+        if (timer <= 0) {
             clearIntervals();
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
-            $('.timer').remove();
-            $('.score').remove();
+            $('.timer').hide();
+            $('.score').hide();
             $startGameButton.show();
             showScore(points);
         }
