@@ -36,7 +36,7 @@ function startGame() {
         })
     }, 100);
     $app.append($table);
-    $app.append('Poruszaj strzałkami, by łapać monety!');
+    $app.append('Poruszaj strzałkami, by łapać monety!').css('font-size', 'x-large');
     $startGameButton.hide();
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
