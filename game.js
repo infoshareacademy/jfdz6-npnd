@@ -76,7 +76,7 @@ function startGame() {
             $startGameButton.show();
         }
         console.log(timer);
-        $('.timer').text("Time left: "+timer);
+        $('.timer').text("Time left: " + timer);
     }, 1000);
 
     function calculateScore() {
@@ -85,7 +85,7 @@ function startGame() {
         if (pointCell.length) {
             pointCell.removeClass('coin-cell');
             points++;
-            timer+=2;
+            timer += 2;
         }
         $('.score').text('Score: ' + points);
     }
