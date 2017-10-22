@@ -1,8 +1,10 @@
 var $startGameButton = $('#start-game');
 $startGameButton.click(startGame);
+var highscore;
+var $highscore;
 
 function startGame() {
-    var timer = 10;
+    var timer = 5;
     var $table = helpers.createTable(15, 20);
     var $app = $('#app'); // Find element with id = 'app'
     var $lastRowCells = $('tr:last td', $table);
@@ -16,9 +18,13 @@ function startGame() {
         $startPlayerPosition.addClass('player-cell');
     });
 
-    $startGameButton.on('click', function () {
+    function clearIntervals() {
         clearInterval(createCoin);
         clearInterval(coinMovement);
+        clearInterval(gameTimer);
+    }
+    $startGameButton.on('click', function () {
+        clearIntervals();
         $table.remove();
     });
 
@@ -66,10 +72,11 @@ function startGame() {
     var gameTimer = setInterval(function () {
         timer--;
         if (timer < 0) {
-            clearInterval(gameTimer);
+            clearIntervals();
             alert('KUNIEC');
             $table.remove();
             $startGameButton.show();
+            showScore(points);
         }
         console.log(timer)
     }, 1000);
@@ -77,6 +84,7 @@ function startGame() {
     function calculateScore() {
 
         var pointCell = $('td.coin-cell.player-cell', $table);
+
         if (pointCell.length) {
             pointCell.removeClass('coin-cell');
             points++;
@@ -84,4 +92,28 @@ function startGame() {
         }
         $('.score').text(points);
     }
+
+    highscore = JSON.parse(localStorage.getItem('wynik')) || [];
+    highscore.sort((a, b) => b - a);
+    console.log("O TO NAJLEPSZE WYNIKI: " + highscore.slice(0, 5));
+
+    function showScore(points) {
+        highscore.push(points);
+        localStorage.setItem('wynik', JSON.stringify(highscore));
+    }
+
+    function showHighscore() {
+        if (!$highscore) {
+            $highscore = $('<ol>');
+            $('.highscore').append($highscore);
+        }
+        $highscore.empty();
+        for (var i = 0; i < 5; i++) {
+            var $li = $('<li>');
+            $li.html(highscore[i]);
+            $highscore.append($li);
+        }
+        return $highscore;
+    }
+    showHighscore();
 }
