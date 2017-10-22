@@ -36,6 +36,7 @@ function startGame() {
         })
     }, 100);
     $app.append($table);
+    $app.append('Poruszaj strzałkami, by łapać monety!');
     $startGameButton.hide();
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
@@ -69,6 +70,8 @@ function startGame() {
             clearInterval(gameTimer);
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
+            $('.timer').remove();
+            $('.score').remove();
             $startGameButton.show();
         }
         console.log(timer);
@@ -85,4 +88,5 @@ function startGame() {
         }
         $('.score').text('Score: ' + points);
     }
+
 }
