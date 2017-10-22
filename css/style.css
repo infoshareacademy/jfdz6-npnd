@@ -610,3 +610,22 @@ nav.navbar.shrink .navbar-toggle {
 #app table tr td.player-cell.player-cell-right {
     background-position: -71px;
 }
+.score {
+    position: absolute;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px;
+    overflow: hidden;
+    border: none;
+    font: normal 70px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(219,219,28,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    text-shadow: 5px 5px 0 rgba(255,0,0,1) ;
+}
+#app {
+    position: relative;
+}
