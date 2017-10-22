@@ -559,3 +559,6 @@ nav.navbar.shrink .navbar-toggle {
     color: rgba(219,219,28,1);
     text-shadow: 5px 5px 0 rgba(255,0,0,1);
 }
+#game-manual {
+    font-size: x-large;
+}

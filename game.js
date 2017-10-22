@@ -10,6 +10,7 @@ function startGame() {
     var $firstRowCells = $('tr:first td', $table);
     var $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
     var points = 0;
+    var $gameManual = $('#game-manual');
 
     $('td', $table).addClass('cell');
     $(function () {
@@ -36,7 +37,7 @@ function startGame() {
         })
     }, 100);
     $app.append($table);
-    $app.append('Poruszaj strzałkami, by łapać monety!').css('font-size', 'x-large');
+    $app.append($gameManual);
     $startGameButton.hide();
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
