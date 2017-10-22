@@ -67,11 +67,12 @@ function startGame() {
         timer--;
         if (timer < 0) {
             clearInterval(gameTimer);
-            alert('KUNIEC');
+            alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
             $startGameButton.show();
         }
-        console.log(timer)
+        console.log(timer);
+        $('.timer').text("Time left: "+timer);
     }, 1000);
 
     function calculateScore() {
@@ -82,6 +83,6 @@ function startGame() {
             points++;
             timer+=2;
         }
-        $('.score').text(points);
+        $('.score').text('Score: ' + points);
     }
 }
