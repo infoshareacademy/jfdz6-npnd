@@ -599,5 +599,14 @@ nav.navbar.shrink .navbar-toggle {
 
 .player-cell {
     background: url("../img/player.png") no-repeat;
-    background-size: contain;
+    background-size: 100px 43px;
+    background-position: -35px;
+}
+
+#app table tr td.player-cell.player-cell-left {
+    background-position: -2px;
+}
+
+#app table tr td.player-cell.player-cell-right {
+    background-position: -71px;
 }

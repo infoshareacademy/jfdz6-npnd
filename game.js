@@ -24,13 +24,13 @@ $app.append($table);
 
 function moveRight() {
     if ($('.player-cell', $table).next().length) {
-        $('.player-cell', $table).removeClass('player-cell').next().addClass('player-cell');
+        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
     }
 }
 
 function moveLeft() {
     if ($('.player-cell', $table).prev().length) {
-        $('.player-cell', $table).removeClass('player-cell').prev().addClass('player-cell');
+        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').prev().addClass('player-cell player-cell-left');
     }
 }
 
