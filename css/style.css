@@ -108,7 +108,7 @@ h1 > small{
     z-index: 100000000;
 }
 .hero-text, .hero-content > a {
-    transform: translate(0px,35vh);
+    transform: translate(0px,30vh);
 }
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
@@ -173,9 +173,9 @@ footer {
 
 @media only screen and (min-width: 1025px) {
 
-    .hero-text, .hero-content > a {
-        transform: translate(0px, 38vh)
-    }
+    /*.hero-text, .hero-content > a {*/
+        /*transform: translate(0px, 35vh)*/
+    /*}*/
     .zoom {
         -webkit-transition: all 0.35s ease-in-out;
         -moz-transition: all 0.35s ease-in-out;
@@ -286,6 +286,9 @@ footer p {
     }
 }
 @media(max-width:768px) {
+    .hero-text, .hero-content > a {
+        transform: translate(0px, 15vh)
+    }
     .navbar-default {
         background: #f0f0f0;
         font-size: 14px;
