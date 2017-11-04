@@ -12,6 +12,7 @@ function startGame() {
     var $firstRowCells = $('tr:first td', $table);
     var $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
     var points = 0;
+    var $gameManual = $('#game-manual');
 
     $('td', $table).addClass('cell');
     $(function () {
@@ -26,6 +27,9 @@ function startGame() {
     $startGameButton.on('click', function () {
         clearIntervals();
         $table.remove();
+        $('.timer').show();
+        $('.score').show();
+
     });
 
     var createCoin = setInterval(function () {
@@ -42,6 +46,7 @@ function startGame() {
         })
     }, 100);
     $app.append($table);
+    $app.append($gameManual);
     $startGameButton.hide();
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
@@ -49,15 +54,15 @@ function startGame() {
 function moveRight() {
     if ($('.player-cell', $table).next().length) {
         $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
+        calculateScore();
     }
-    calculateScore()
 }
 
 function moveLeft() {
     if ($('.player-cell', $table).prev().length) {
         $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').prev().addClass('player-cell player-cell-left');
+        calculateScore();
     }
-    calculateScore()
 }
 
     $(window).on('keydown', function (event) {
@@ -71,14 +76,17 @@ function moveLeft() {
 
     var gameTimer = setInterval(function () {
         timer--;
-        if (timer < 0) {
+        if (timer <= 0) {
             clearIntervals();
-            alert('KUNIEC');
+            alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
+            $('.timer').hide();
+            $('.score').hide();
             $startGameButton.show();
             showScore(points);
         }
-        console.log(timer)
+        console.log(timer);
+        $('.timer').text("Time left: " + timer);
     }, 1000);
 
     function calculateScore() {
@@ -88,9 +96,9 @@ function moveLeft() {
         if (pointCell.length) {
             pointCell.removeClass('coin-cell');
             points++;
-            timer+=2;
+            timer += 2;
         }
-        $('.score').text(points);
+        $('.score').text('Score: ' + points);
     }
 
     highscore = JSON.parse(localStorage.getItem('wynik')) || [];
