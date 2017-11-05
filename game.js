@@ -13,24 +13,22 @@ function startGame() {
     var $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
     var points = 0;
     var $gameManual = $('#game-manual');
+    var coinMovement;
+    $('.timer').show();
+    $('.score').show();
 
     $('td', $table).addClass('cell');
     $(function () {
         $startPlayerPosition.addClass('player-cell');
     });
 
-    function clearIntervals() {
+    function cleanup() {
         clearInterval(createCoin);
         clearInterval(coinMovement);
         clearInterval(gameTimer);
-    }
-    $startGameButton.on('click', function () {
-        clearIntervals();
         $table.remove();
-        $('.timer').show();
-        $('.score').show();
 
-    });
+    }
 
     var createCoin = setInterval(function () {
         $(function () {
@@ -40,12 +38,25 @@ function startGame() {
         calculateScore();
     }, 1000);
 
-    var coinMovement = setInterval(function () {
-        $('td.coin-cell').each(function () {
-            $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
-        })
-    }, 100);
-    $app.append($table);
+    function difficulty(score) {
+        return score > 10 ? 50 : 100;
+    }
+
+    function go(howFast) {
+        coinMovement = setTimeout(function () {
+            $('td.coin-cell').each(function () {
+                $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
+            });
+            calculateScore();
+            if (timer > 0) {
+                go(difficulty(points))
+            }
+        }, howFast);
+    }
+
+    go(100);
+
+        $app.append($table);
     $app.append($gameManual);
     $startGameButton.hide();
 
@@ -74,13 +85,13 @@ function moveLeft() {
     var gameTimer = setInterval(function () {
         timer--;
         if (timer <= 0) {
-            clearIntervals();
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
             $('.timer').hide();
             $('.score').hide();
             $startGameButton.show();
             showScore(points);
+            cleanup();
         }
         console.log(timer);
         $('.timer').text("Time left: " + timer);
@@ -122,5 +133,6 @@ function moveLeft() {
         }
         return $highscore;
     }
+
     showHighscore();
 }
