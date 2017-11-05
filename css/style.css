@@ -628,6 +628,8 @@ nav.navbar.shrink .navbar-toggle {
 
 #app {
     position: relative;
+    margin-left:auto;
+    margin-right:auto;
     width: 460px;
 }
 
@@ -646,4 +648,9 @@ nav.navbar.shrink .navbar-toggle {
 
 #game-manual {
     font-size: x-large;
+}
+
+table {
+
+
 }
