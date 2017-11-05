@@ -49,8 +49,6 @@ function startGame() {
     $app.append($gameManual);
     $startGameButton.hide();
 
-// x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
-
 function moveRight() {
     if ($('.player-cell', $table).next().length) {
         $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
@@ -64,7 +62,6 @@ function moveLeft() {
         calculateScore();
     }
 }
-
     $(window).on('keydown', function (event) {
         if (event.keyCode === 39) {
             moveRight()
@@ -100,16 +97,17 @@ function moveLeft() {
         }
         $('.score').text('Score: ' + points);
     }
-
-    highscore = JSON.parse(localStorage.getItem('wynik')) || [];
-    highscore.sort((a, b) => b - a);
-    console.log("O TO NAJLEPSZE WYNIKI: " + highscore.slice(0, 5));
-
+    var playerName = prompt('Podaj swoje imię');
+    highscore = JSON.parse(localStorage.getItem('wyniki')) || [];
+    highscore.sort((a, b) => b.score - a.score);
     function showScore(points) {
-        highscore.push(points);
-        localStorage.setItem('wynik', JSON.stringify(highscore));
+        var myResult = {
+            name: playerName,
+            score: points
+        };
+        highscore.push(myResult);
+        localStorage.setItem('wyniki', JSON.stringify(highscore));
     }
-
     function showHighscore() {
         if (!$highscore) {
             $highscore = $('<ol>');
@@ -118,7 +116,8 @@ function moveLeft() {
         $highscore.empty();
         for (var i = 0; i < 5; i++) {
             var $li = $('<li>');
-            $li.html(highscore[i]);
+            $li.append(highscore[i].score + " " );
+            $li.append(highscore[i].name);
             $highscore.append($li);
         }
         return $highscore;
