@@ -524,6 +524,9 @@ nav.navbar.shrink .navbar-toggle {
 
 #social_media a, .easter {
     text-decoration: none;
+
+}
+.easter {
     color: black;
 }
 
