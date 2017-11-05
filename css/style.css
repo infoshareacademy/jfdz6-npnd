@@ -464,9 +464,8 @@ footer p {
 
 .fa-money.hvr-pulse:hover {
     color: transparent;
-    background: url('../img/22-color.png') no-repeat;
-    background-size: 110px 32px;
-    background-position: -36px;
+    background: url('../img/22-color2.png');
+    background-size: 100%;
 }
 
 .hvr-round-corners {
@@ -523,8 +522,9 @@ nav.navbar.shrink .navbar-toggle {
     transition: all 0.3s ease-out;
 }
 
-#social_media a {
+#social_media a, .easter {
     text-decoration: none;
+    color: black;
 }
 
 #social_media {
