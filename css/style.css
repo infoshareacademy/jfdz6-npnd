@@ -462,6 +462,13 @@ footer p {
     animation-iteration-count: infinite;
 }
 
+.fa-money.hvr-pulse:hover {
+    color: transparent;
+    background: url('../img/22-color.png') no-repeat;
+    background-size: 110px 32px;
+    background-position: -36px;
+}
+
 .hvr-round-corners {
     display: inline-block;
     vertical-align: middle;
