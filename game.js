@@ -1,10 +1,11 @@
 var $startGameButton = $('#start-game');
+var $welcomeScreen = $('.welcome');
 $startGameButton.click(startGame);
 var highscore;
 var $highscore;
 
 function startGame() {
-    var timer = 5;
+    var timer = 500;
     var $table = helpers.createTable(15, 20);
     var $app = $('#app'); // Find element with id = 'app'
     var $lastRowCells = $('tr:last td', $table);
@@ -48,6 +49,7 @@ function startGame() {
     $app.append($table);
     $app.append($gameManual);
     $startGameButton.hide();
+    $welcomeScreen.hide();
 
 // x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
 
@@ -83,6 +85,8 @@ function moveLeft() {
             $('.timer').hide();
             $('.score').hide();
             $startGameButton.show();
+            $welcomeScreen.show();
+
             showScore(points);
         }
         console.log(timer);
