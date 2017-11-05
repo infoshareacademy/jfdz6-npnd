@@ -631,10 +631,18 @@ nav.navbar.shrink .navbar-toggle {
     width: 460px;
 }
 
+.highscore {
+    font: normal 35px/1 "VT323", Helvetica, sans-serif;
+}
+
 .timer {
     right: 0;
     color: rgba(255, 0, 0, 1);
     text-shadow: 2px 2px 0 rgba(219, 219, 28, 1);
+}
+
+.highscore,
+.timer {
     font: normal 35px/1 "VT323", Helvetica, sans-serif;
 }
 
@@ -646,4 +654,11 @@ nav.navbar.shrink .navbar-toggle {
 
 #game-manual {
     font-size: x-large;
+}
+
+.highscore {
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    text-align: center;
 }
