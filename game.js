@@ -16,6 +16,7 @@ function startGame() {
     var coinMovement;
     $('.timer').show();
     $('.score').show();
+    $('.highscore').hide();
 
     $('td', $table).addClass('cell');
     $(function () {
@@ -90,6 +91,7 @@ function moveLeft() {
             $('.timer').hide();
             $('.score').hide();
             $startGameButton.show();
+            $('.highscore').show();
             showScore(points);
             cleanup();
         }
