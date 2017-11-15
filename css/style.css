@@ -644,7 +644,8 @@ nav.navbar.shrink .navbar-toggle {
 }
 
 .highscore,
-.timer {
+.timer,
+#game-manual {
     font: normal 35px/1 "VT323", Helvetica, sans-serif;
 }
 
@@ -652,6 +653,7 @@ nav.navbar.shrink .navbar-toggle {
     font: normal 70px/1 "VT323", Helvetica, sans-serif;
     color: rgba(219, 219, 28, 1);
     text-shadow: 5px 5px 0 rgba(255, 0, 0, 1);
+    top: 20px;
 }
 
 #game-manual {
@@ -668,18 +670,16 @@ nav.navbar.shrink .navbar-toggle {
     font: normal 90px/1 "VT323", Helvetica, sans-serif;
     color: rgba(219, 219, 28, 1);
     text-shadow: 5px 5px 0 rgba(255, 0, 0, 1);
-    border: 0px;
+    border: 10px double rgba(255, 0, 0, 1);
     background-color: rgba(255, 255, 255, 0);
     padding-bottom: 20px;
     padding-top: 10px;
-
-
 }
 .welcome {
     position: relative;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 0px;
+    margin-top: 0;
     width: 450px;
     height: 600px;
     background-image: url('https://i.imgur.com/UZKEjzG.png');
@@ -687,17 +687,17 @@ nav.navbar.shrink .navbar-toggle {
     background-size: cover;
     text-align: center;
 }
-h1 {
+.welcome h1 {
     font: normal 70px/1 "VT323", Helvetica, sans-serif;
     color: rgba(255, 0, 0, 1);
     text-shadow: 2px 2px 0 rgba(219, 219, 28, 1);
     padding-top: 10px;
-    margin-top: 0px;
+    margin-top: 0;
 }
-h2 {
+.welcome h2 {
     font: normal 35px/1 "VT323", Helvetica, sans-serif;
     color: rgba(255, 0, 0, 1);
     text-shadow: 2px 2px 0 rgba(219, 219, 28, 1);
     padding-top: 10px;
-    margin-top: 0px;
+    margin-top: 0;
 }
