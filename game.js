@@ -1,4 +1,5 @@
 var $startGameButton = $('#start-game');
+var $welcomeScreen = $('.welcome');
 $startGameButton.click(startGame);
 var highscore;
 var $highscore;
@@ -28,6 +29,7 @@ function startGame() {
         clearInterval(coinMovement);
         clearInterval(gameTimer);
         $table.remove();
+
 
     }
 
@@ -60,6 +62,7 @@ function startGame() {
         $app.append($table);
     $app.append($gameManual);
     $startGameButton.hide();
+    $welcomeScreen.hide();
 
 function moveRight() {
     if ($('.player-cell', $table).next().length) {
@@ -92,6 +95,7 @@ function moveLeft() {
             $('.score').hide();
             $startGameButton.show();
             $('.highscore').show();
+            $welcomeScreen.show();
             showScore(points);
             cleanup();
         }
@@ -135,6 +139,5 @@ function moveLeft() {
         }
         return $highscore;
     }
-
     showHighscore();
 }
