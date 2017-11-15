@@ -5,7 +5,7 @@ var highscore;
 var $highscore;
 
 function startGame() {
-    var timer = 500;
+    var timer = 5;
     var $table = helpers.createTable(15, 20);
     var $app = $('#app'); // Find element with id = 'app'
     var $lastRowCells = $('tr:last td', $table);
@@ -14,24 +14,24 @@ function startGame() {
     var $startCoinPosition = $firstRowCells.eq(Math.floor(Math.random() * parseInt($firstRowCells.length)));
     var points = 0;
     var $gameManual = $('#game-manual');
+    var coinMovement;
+    $('.timer').show();
+    $('.score').show();
+    $('.highscore').hide();
 
     $('td', $table).addClass('cell');
     $(function () {
         $startPlayerPosition.addClass('player-cell');
     });
 
-    function clearIntervals() {
+    function cleanup() {
         clearInterval(createCoin);
         clearInterval(coinMovement);
         clearInterval(gameTimer);
-    }
-    $startGameButton.on('click', function () {
-        clearIntervals();
         $table.remove();
-        $('.timer').show();
-        $('.score').show();
 
-    });
+
+    }
 
     var createCoin = setInterval(function () {
         $(function () {
@@ -41,17 +41,28 @@ function startGame() {
         calculateScore();
     }, 1000);
 
-    var coinMovement = setInterval(function () {
-        $('td.coin-cell').each(function () {
-            $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
-        })
-    }, 100);
-    $app.append($table);
+    function difficulty(score) {
+        return score > 10 ? 50 : 100;
+    }
+
+    function go(howFast) {
+        coinMovement = setTimeout(function () {
+            $('td.coin-cell').each(function () {
+                $(this).removeClass('coin-cell').parent().next().find('td').eq($(this).index()).addClass('coin-cell')
+            });
+            calculateScore();
+            if (timer > 0) {
+                go(difficulty(points))
+            }
+        }, howFast);
+    }
+
+    go(100);
+
+        $app.append($table);
     $app.append($gameManual);
     $startGameButton.hide();
     $welcomeScreen.hide();
-
-// x.eq(parseInt(x.length/2)) <-- środkowa pozycja w ostatnim rzędzie
 
 function moveRight() {
     if ($('.player-cell', $table).next().length) {
@@ -66,7 +77,6 @@ function moveLeft() {
         calculateScore();
     }
 }
-
     $(window).on('keydown', function (event) {
         if (event.keyCode === 39) {
             moveRight()
@@ -79,15 +89,15 @@ function moveLeft() {
     var gameTimer = setInterval(function () {
         timer--;
         if (timer <= 0) {
-            clearIntervals();
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
             $('.timer').hide();
             $('.score').hide();
             $startGameButton.show();
+            $('.highscore').show();
             $welcomeScreen.show();
-
             showScore(points);
+            cleanup();
         }
         console.log(timer);
         $('.timer').text("Time left: " + timer);
@@ -104,16 +114,17 @@ function moveLeft() {
         }
         $('.score').text('Score: ' + points);
     }
-
-    highscore = JSON.parse(localStorage.getItem('wynik')) || [];
-    highscore.sort((a, b) => b - a);
-    console.log("O TO NAJLEPSZE WYNIKI: " + highscore.slice(0, 5));
-
+    var playerName = prompt('Podaj swoje imię');
+    highscore = JSON.parse(localStorage.getItem('wyniki')) || [];
+    highscore.sort((a, b) => b.score - a.score);
     function showScore(points) {
-        highscore.push(points);
-        localStorage.setItem('wynik', JSON.stringify(highscore));
+        var myResult = {
+            name: playerName,
+            score: points
+        };
+        highscore.push(myResult);
+        localStorage.setItem('wyniki', JSON.stringify(highscore));
     }
-
     function showHighscore() {
         if (!$highscore) {
             $highscore = $('<ol>');
@@ -122,7 +133,8 @@ function moveLeft() {
         $highscore.empty();
         for (var i = 0; i < 5; i++) {
             var $li = $('<li>');
-            $li.html(highscore[i]);
+            $li.append(highscore[i].score + " " );
+            $li.append(highscore[i].name);
             $highscore.append($li);
         }
         return $highscore;

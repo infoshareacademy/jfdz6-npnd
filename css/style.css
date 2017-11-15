@@ -462,6 +462,12 @@ footer p {
     animation-iteration-count: infinite;
 }
 
+.fa-money.hvr-pulse:hover {
+    color: transparent;
+    background: url('../img/22-color2.png');
+    background-size: 100%;
+}
+
 .hvr-round-corners {
     display: inline-block;
     vertical-align: middle;
@@ -516,8 +522,12 @@ nav.navbar.shrink .navbar-toggle {
     transition: all 0.3s ease-out;
 }
 
-#social_media a {
+#social_media a, .easter {
     text-decoration: none;
+
+}
+.easter {
+    color: black;
 }
 
 #social_media {
@@ -631,10 +641,6 @@ nav.navbar.shrink .navbar-toggle {
     margin-left:auto;
     margin-right:auto;
     width: 450px;
-}
-
-.highscore {
-    font: normal 35px/1 "VT323", Helvetica, sans-serif;
 }
 
 .timer {
