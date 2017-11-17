@@ -158,8 +158,7 @@ footer {
 }
 
 @media only screen and (min-width: 313px) and (max-width: 599px) {
-    .hero-text, .hero-content > a {
-        transform: translate(0px, 10vh)
+    .hero-text, .hero-content > a {transform: translate(0px, 10vh)
     }
 }
 
@@ -226,14 +225,7 @@ hr.separator {
 }
 
 .thumbnail {
-    height: 51rem;
-}
-
-#authors .thumbnail .btn {
-    position: absolute;
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 45rem;
 }
 
 footer p {
@@ -295,7 +287,7 @@ footer p {
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .thumbnail {
-        height: 62rem;
+        height: 53rem;
     }
 }
 
@@ -310,7 +302,7 @@ footer p {
     }
 
     .thumbnail {
-        height: 45rem;
+        height:auto;
     }
 }
 
