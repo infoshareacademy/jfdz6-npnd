@@ -12,6 +12,12 @@ body {
     margin-top: 0;
 }
 
+#features,
+#contact,
+#authors {
+    padding-top: 20px;
+}
+
 h1 > small {
     display: block;
 }
@@ -80,12 +86,6 @@ h1 > small {
     transform: translate(0px, 35vh);
 }
 
-#features,
-#authors,
-#contact {
-    padding-top: 20px;
-}
-
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
 }
@@ -151,10 +151,21 @@ footer {
     padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 312px) {
+    .hero-text, .hero-content > a {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 313px) and (max-width: 599px) {
+    .hero-text, .hero-content > a {transform: translate(0px, 10vh)
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
 
     .hero-text, .hero-content > a {
-        transform: translate(0px, 40vh)
+        transform: translate(0px, 35vh)
     }
 }
 
@@ -291,7 +302,7 @@ footer p {
     }
 
     .thumbnail {
-        height: auto;
+        height:auto;
     }
 }
 
