@@ -1,5 +1,3 @@
-
-
 var features = document.getElementById('features');
 var contact = document.getElementById('contact');
 var authors = document.getElementById('authors');
@@ -19,13 +17,14 @@ function toggleTitle() {
 }
 
 function isAbove(node) {
-    return document.body.scrollTop <= node.offsetTop
+    return document.documentElement.scrollTop <= node.offsetTop - 40
 }
 
 function isBelow(node) {
-    return document.body.scrollTop > node.offsetTop
+    return document.documentElement.scrollTop > node.offsetTop - 40
 }
 
 function setTitle(title) {
     document.title = title;
 }
+
