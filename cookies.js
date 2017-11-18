@@ -1,4 +1,4 @@
-function showCookieInfo() {
+(function showCookieInfo() {
     if (!localStorage.getItem('npnd-cookie-info')) {
         var cookieInfo = document.createElement('div');
         cookieInfo.setAttribute('id', 'cookieInfo');
@@ -9,4 +9,4 @@ function showCookieInfo() {
             localStorage.setItem('npnd-cookie-info', '1');
         });
     }
-}
+}());
