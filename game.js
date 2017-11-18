@@ -17,7 +17,7 @@ function getPlayerName() {
 function startGame(playerName) {
     var timer = 5;
     var $table = helpers.createTable(15, 20);
-    var $app = $('#app'); // Find element with id = 'app'
+    var $app = $('#app');
     var $lastRowCells = $('tr:last td', $table);
     var $startPlayerPosition = $lastRowCells.eq(parseInt($lastRowCells.length / 2));
     var $firstRowCells = $('tr:first td', $table);
@@ -38,6 +38,7 @@ function startGame(playerName) {
         clearInterval(createCoin);
         clearInterval(coinMovement);
         clearInterval(gameTimer);
+        showScore(points);
         $table.remove();
 
 
@@ -100,7 +101,6 @@ function startGame(playerName) {
     var gameTimer = setInterval(function () {
         timer--;
         if (timer <= 0) {
-            // debugger
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
             $('.timer').hide();
@@ -108,11 +108,8 @@ function startGame(playerName) {
             $startGameButton.show();
             $('.highscore').show();
             $welcomeScreen.show();
-            showScore(points);
-            // showHighscore()
             cleanup();
         }
-        console.log(timer);
         $('.timer').text("Time left: " + timer);
     }, 1000);
 
