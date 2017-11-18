@@ -472,6 +472,12 @@ footer p {
     animation-iteration-count: infinite;
 }
 
+.easterEgg:hover {
+    color: transparent;
+    background: url('../img/22-color2.png');
+    background-size: 100%;
+}
+
 .hvr-round-corners {
     display: inline-block;
     vertical-align: middle;
@@ -526,8 +532,13 @@ nav.navbar.shrink .navbar-toggle {
     transition: all 0.3s ease-out;
 }
 
-#social_media a {
+#social_media a, .easter {
     text-decoration: none;
+
+}
+
+.easter {
+    color: black;
 }
 
 #social_media {
@@ -561,4 +572,152 @@ nav.navbar.shrink .navbar-toggle {
     #copywright {
         height: 5rem;
     }
+}
+
+#app > table {
+    background-image: url('https://i.imgur.com/UZKEjzG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+}
+
+.coin-cell {
+    background-image: url('../img/22-color.png');
+    background-size: 110px 32px;
+}
+
+#app table tr:nth-child(7n+1) td.coin-cell {
+    background-position: -4px;
+}
+
+#app table tr:nth-child(7n+2) td.coin-cell {
+    background-position: -32px;
+}
+
+#app table tr:nth-child(7n+3) td.coin-cell {
+    background-position: -56px;
+}
+
+#app table tr:nth-child(7n+4) td.coin-cell {
+    background-position: -78px;
+}
+
+#app table tr:nth-child(7n+5) td.coin-cell {
+    background-position: -56px;
+}
+
+#app table tr:nth-child(7n+6) td.coin-cell {
+    background-position: -32px;
+}
+
+#app table tr:nth-child(7n+7) td.coin-cell {
+    background-position: -4px;
+}
+
+.player-cell {
+    background: url("../img/player.png") no-repeat;
+    background-size: 100px 43px;
+    background-position: -35px;
+}
+
+#app table tr td.player-cell.player-cell-left {
+    background-position: -2px;
+}
+
+#app table tr td.player-cell.player-cell-right {
+    background-position: -71px;
+}
+
+.score,
+.timer {
+    position: absolute;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px;
+    overflow: hidden;
+    border: none;
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+#app {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+.timer {
+    right: 0;
+    color: rgba(255, 0, 0, 1);
+    text-shadow: 2px 2px 0 rgba(219, 219, 28, 1);
+}
+
+.highscore,
+.timer,
+#game-manual {
+    font: normal 35px/1 "VT323", Helvetica, sans-serif;
+}
+
+.score {
+    font: normal 70px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(219, 219, 28, 1);
+    text-shadow: 5px 5px 0 rgba(255, 0, 0, 1);
+    top: 20px;
+}
+
+#game-manual {
+    font-size: x-large;
+    text-align: center;
+}
+
+.highscore {
+    color: black;
+    text-align: center;
+}
+
+#start-game {
+    font: normal 90px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(219, 219, 28, 1);
+    text-shadow: 5px 5px 0 rgba(255, 0, 0, 1);
+    border: 10px double rgba(255, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.welcome {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 450px;
+    height: 600px;
+    background-image: url('https://i.imgur.com/UZKEjzG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.welcome h1 {
+    font: normal 70px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(255, 0, 0, 1);
+    text-shadow: 2px 2px 0 rgba(219, 219, 28, 1);
+    padding-top: 10px;
+    margin-top: 0;
+}
+
+.welcome h2 {
+    font: normal 35px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(255, 0, 0, 1);
+    text-shadow: 2px 2px 0 rgba(219, 219, 28, 1);
+    padding-top: 10px;
+    margin-top: 0;
 }
