@@ -59,24 +59,25 @@ function startGame() {
 
     go(100);
 
-        $app.append($table);
+    $app.append($table);
     $app.append($gameManual);
     $startGameButton.hide();
     $welcomeScreen.hide();
 
-function moveRight() {
-    if ($('.player-cell', $table).next().length) {
-        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
-        calculateScore();
+    function moveRight() {
+        if ($('.player-cell', $table).next().length) {
+            $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').next().addClass('player-cell player-cell-right');
+            calculateScore();
+        }
     }
-}
 
-function moveLeft() {
-    if ($('.player-cell', $table).prev().length) {
-        $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').prev().addClass('player-cell player-cell-left');
-        calculateScore();
+    function moveLeft() {
+        if ($('.player-cell', $table).prev().length) {
+            $('.player-cell', $table).removeClass('player-cell player-cell-right player-cell-left').prev().addClass('player-cell player-cell-left');
+            calculateScore();
+        }
     }
-}
+
     $(window).on('keydown', function (event) {
         if (event.keyCode === 39) {
             moveRight()
@@ -89,6 +90,7 @@ function moveLeft() {
     var gameTimer = setInterval(function () {
         timer--;
         if (timer <= 0) {
+            // debugger
             alert('KUNIEC. Twój wynik to: ' + points);
             $table.remove();
             $('.timer').hide();
@@ -97,6 +99,7 @@ function moveLeft() {
             $('.highscore').show();
             $welcomeScreen.show();
             showScore(points);
+            // showHighscore()
             cleanup();
         }
         console.log(timer);
@@ -114,9 +117,11 @@ function moveLeft() {
         }
         $('.score').text('Score: ' + points);
     }
+
     var playerName = prompt('Podaj swoje imię');
     highscore = JSON.parse(localStorage.getItem('wyniki')) || [];
-    highscore.sort((a, b) => b.score - a.score);
+
+
     function showScore(points) {
         var myResult = {
             name: playerName,
@@ -124,8 +129,10 @@ function moveLeft() {
         };
         highscore.push(myResult);
         localStorage.setItem('wyniki', JSON.stringify(highscore));
+        showHighscore(highscore.sort((a, b) => b.score - a.score));
     }
-    function showHighscore() {
+
+    function showHighscore(highscore) {
         if (!$highscore) {
             $highscore = $('<ol>');
             $('.highscore').append($highscore);
@@ -133,11 +140,12 @@ function moveLeft() {
         $highscore.empty();
         for (var i = 0; i < 5; i++) {
             var $li = $('<li>');
-            $li.append(highscore[i].score + " " );
+            $li.append(highscore[i].score + " ");
             $li.append(highscore[i].name);
             $highscore.append($li);
         }
         return $highscore;
     }
-    showHighscore();
+
+
 }
