@@ -1,10 +1,20 @@
 var $startGameButton = $('#start-game');
 var $welcomeScreen = $('.welcome');
-$startGameButton.click(startGame);
+$startGameButton.click(getPlayerName);
 var highscore;
 var $highscore;
 
-function startGame() {
+function getPlayerName() {
+
+    var playerName = prompt('Podaj swoje imię');
+    while (!playerName) {
+        playerName = prompt('Podaj swoje imię');
+    }
+
+    startGame(playerName)
+}
+
+function startGame(playerName) {
     var timer = 5;
     var $table = helpers.createTable(15, 20);
     var $app = $('#app'); // Find element with id = 'app'
@@ -118,7 +128,6 @@ function startGame() {
         $('.score').text('Score: ' + points);
     }
 
-    var playerName = prompt('Podaj swoje imię');
     highscore = JSON.parse(localStorage.getItem('wyniki')) || [];
 
 
