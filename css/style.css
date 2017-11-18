@@ -462,7 +462,7 @@ footer p {
     animation-iteration-count: infinite;
 }
 
-.fa-money.hvr-pulse:hover {
+.easterEgg:hover {
     color: transparent;
     background: url('../img/22-color2.png');
     background-size: 100%;
