@@ -53,7 +53,15 @@ function startGame(playerName) {
     }, 1000);
 
     function difficulty(score) {
-        return score > 10 ? 50 : 100;
+        if (score > 10 && score < 20) {
+            return 50
+        } else if (score >= 20 && score <30) {
+            return 25
+        } else if (score >= 30) {
+            return 10
+        } else {
+        return  100;
+        }
     }
 
     function go(howFast) {
