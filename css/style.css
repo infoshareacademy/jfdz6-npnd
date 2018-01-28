@@ -43,12 +43,31 @@ h1 > small {
     width: 200px;
     height: 50px;
 }
+.function-card-container{
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.function-card-container h2{
+    color: #112349;
+}
+.function-card-container-inner{
+    background-color: #f5f5f5;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 30px;
+    height: 280px;
+}
+.card-icon::before{
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
 
 .navbar-default {
     background: transparent;
     font-size: 20px;
     z-index: 1000000000;
     transition: all 300ms;
+    box-sizing: border-box;
 }
 
 .navbar-fixed-top {
@@ -57,18 +76,20 @@ h1 > small {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: white;
+    color: white !important;
     background-color: transparent;
+    box-sizing: border-box;
+    border-bottom: 4px solid transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    border-bottom: 1px solid #12246a;
     color: white;
+    border-bottom: 4px solid white;
+
 }
 
 .navbar-default .navbar-nav > li > a:active {
-    color: #af000a;
-    background-color: #fff;
+    border-bottom: 4px solid white;
 }
 
 #hero {
@@ -87,7 +108,7 @@ h1 > small {
     font-weight: 700;
     color: white;
     letter-spacing: 3px;
-    padding-top: 150px;
+    padding-top: 250px;
 }
 .hero-subtitle{
     font-size: 24px;
@@ -327,6 +348,31 @@ footer {
     border-bottom: 1px solid white;
 }
 
+.bg-finanse-city, .bg-finanse-people {
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 100vh;
+    background-position: center;
+}
+.bg-finanse-city{
+    background-image: url('../img/finance_city.jpg');
+}
+.bg-finanse-people{
+    background-image: url('../img/finance_people.jpg');
+}
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+.carousel-inner {
+    height:100%;
+}
+[]
+.carousel, .item, .active {
+    height:100%;
+}
+
 @media screen and (min-width: 615px) and (max-width: 991px) {
     #contact_info {
         left: 50%;
@@ -556,32 +602,6 @@ nav.navbar.shrink {
     background-color: #112349;
     color: white;
 }
-
-/*nav.navbar.shrink .navbar-brand {*/
-    /*font-size: 25px;*/
-/*}*/
-
-/*nav.navbar.shrink a {*/
-    /*font-size: 15px;*/
-    /*padding-bottom: 10px !important;*/
-    /*padding-top: 10px !important;*/
-/*}*/
-
-/*nav.navbar.shrink .navbar-toggle {*/
-    /*margin: 8px 15px 8px 0;*/
-    /*padding: 4px 5px;*/
-/*}*/
-
-/*.img-logo.shrink {*/
-    /*width: 100px;*/
-    /*height: 25px;*/
-    /*transform: translateY(25%);*/
-    /*transition: all 0.3s ease;*/
-/*}*/
-
-/*.img-logo.shrinkOut {*/
-    /*transition: all 0.3s ease-out;*/
-/*}*/
 
 #social_media a, .easter {
     text-decoration: none;
