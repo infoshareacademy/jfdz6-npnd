@@ -158,7 +158,8 @@ footer {
 }
 
 @media only screen and (min-width: 313px) and (max-width: 599px) {
-    .hero-text, .hero-content > a {transform: translate(0px, 10vh)
+    .hero-text, .hero-content > a {
+        transform: translate(0px, 10vh)
     }
 }
 
@@ -302,7 +303,7 @@ footer p {
     }
 
     .thumbnail {
-        height:auto;
+        height: auto;
     }
 }
 
