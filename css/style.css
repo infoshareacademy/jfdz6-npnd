@@ -31,9 +31,7 @@ h1 > small {
     height: 100%;
 }
 
-.contact_form_list:first-child {
-    padding-right: 8px;
-}
+
 
 .contact_form_list {
     padding: 8px 0;
@@ -109,6 +107,8 @@ h1 > small {
     color: white;
     letter-spacing: 3px;
     padding-top: 250px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .hero-subtitle{
     font-size: 24px;
@@ -127,9 +127,6 @@ h1 > small {
     color: #292929;
 }
 
-/*.hero-text, .hero-content > a {*/
-    /*transform: translate(0px, 35vh);*/
-/*}*/
 
 #features > .col-lg-12 .top1 > .col-lg-6 .col-md-6 .col-sm-6 .col-xs-12 {
     position: relative;
@@ -231,55 +228,8 @@ h1 > small {
     padding-right: 0;
 }
 
-
-
-@media only screen and (max-width: 312px) {
-    .hero-text, .hero-content > a {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 313px) and (max-width: 599px) {
-    .hero-text, .hero-content > a {
-        transform: translate(0px, 10vh)
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-
-    /*.hero-text, .hero-content > a {*/
-        /*transform: translate(0px, 35vh)*/
-    /*}*/
-}
-
-@media only screen and (min-width: 1025px) {
-
-    /*.hero-text, .hero-content > a {*/
-        /*transform: translate(0px, 38vh)*/
-    /*}*/
-
-    .zoom {
-        -webkit-transition: all 0.35s ease-in-out;
-        -moz-transition: all 0.35s ease-in-out;
-        transition: all 0.35s ease-in-out;
-        cursor: -webkit-zoom-in;
-        cursor: -moz-zoom-in;
-        cursor: zoom-in;
-    }
-
-    .zoom:hover,
-    .zoom:active,
-    .zoom:focus {
-        /**adjust scale to desired size,
-        add browser prefixes**/
-        -ms-transform: scale(1.5);
-        -moz-transform: scale(1.5);
-        -webkit-transform: scale(1.5);
-        -o-transform: scale(1.5);
-        transform: scale(1.5);
-        position: relative;
-        z-index: 100;
-    }
+.remove-padding {
+    padding: 0;
 }
 
 #contact_info {
@@ -374,33 +324,7 @@ html, body {
     height:100%;
 }
 
-@media screen and (min-width: 615px) and (max-width: 991px) {
-    #contact_info {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-    .thumbnail {
-        height: 53rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-default {
-        background: #f0f0f0;
-        font-size: 14px;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    .thumbnail {
-        height: auto;
-    }
-}
 
 #topBtn {
     opacity: 0;
@@ -614,36 +538,12 @@ nav.navbar.shrink {
 }
 
 #social_media {
-    width: auto;
-    position: absolute;
+    width: 40px;
+    position: fixed;
     bottom: 0;
-    top: auto;
-    left: 50%;
+    top: 245px;
+    left: 20px;
     transform: translateX(-50%);
-}
-
-@media screen and (min-width: 769px) {
-    #social_media {
-        width: 40px;
-        background: transparent;
-        position: fixed;
-        top: 40vh;
-        z-index: 7000;
-        transform: none;
-        left: 0;
-        font-size: large;
-    }
-
-    #social_media a:hover {
-        font-size: xx-large;
-        transition: all 0.4s ease-in-out;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #copywright {
-        height: 5rem;
-    }
 }
 
 #app > table {
@@ -801,4 +701,180 @@ nav.navbar.shrink {
 #game-container {
     position: relative;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .thumbnail {
+        height: 65rem;
+    }
+    #social_media {
+        font-size: 17px
+    }
+}
+@media only screen and (min-width: 1025px) {
+
+
+    .zoom {
+        -webkit-transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        transition: all 0.35s ease-in-out;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+        cursor: zoom-in;
+    }
+
+    .zoom:hover,
+    .zoom:active,
+    .zoom:focus {
+        /**adjust scale to desired size,
+        add browser prefixes**/
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+        position: relative;
+        z-index: 100;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contact_form_list:first-child {
+        padding-right: 8px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #social_media {
+        width: 40px;
+        background: transparent;
+        position: fixed;
+        top: 40vh;
+        z-index: 7000;
+        transform: none;
+        left: 0;
+        font-size: 17px;
+    }
+
+    #social_media a:hover {
+        font-size: xx-large;
+        transition: all 0.4s ease-in-out;
+    }
+    .thumbnail {
+        height: 50rem;
+    }
+    .function-card-container-inner {
+        height: 350px;
+    }
+    #features i.fa {
+        font-size: 30px;
+    }
+
+    .fa-money:before {
+        position: relative;
+        top: 10px;
+        left: -10px;
+    }
+    .hero-text {
+        font-size: 60px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .navbar-default {
+        background: #112349;
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .thumbnail {
+        height: 600px;
+
+    }
+    .thumbnail-text-content, .function-card-container-inner {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .row {
+        margin: 0;
+    }
+    #copywright {
+        height: 5rem;
+    }
+    .hero-text {
+        font-size: 50px;
+        padding: 250px 35px 0;
+    }
+    #social_media{
+        font-size: 20px;
+    }
+    .function-card-container-inner{
+        height: 550px;
+    }
+}
+
+@media only screen and (max-width: 312px) {
+    .hero-text, .hero-content > a {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+    .hero-text {
+        padding-top: 130px;
+    }
+    .cta-btn {
+        margin-top: 35px;
+    }
+    #social_media {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 313px) and (max-width: 599px) {
+    #footer_menu a {
+        padding: 15px;
+    }
+
+    #features i.fa {
+        font-size: 30px;
+    }
+
+    .hero-text {
+        font-size: 40px;
+    }
+    .hero-subtitle{
+        font-size: 18px;
+        padding: 0 35px 0;
+    }
+    .function-card-container, #contact, .authors-cards {
+        margin: 0 15px 0;
+    }
+    .cta-btn {
+        width: 215px;
+    }
+    .function-card-container-inner{
+        height: auto;
+    }
+    #social_media{
+        font-size: 16px;
+    }
+    .thumbnail {
+        height: auto;
+    }
+    .equation{
+      padding-right: 8px;
+    }
+    label {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
 
